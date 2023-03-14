@@ -1,0 +1,127 @@
+:root {
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --accent: #cba6f7;
+    --text: #cdd6f4;
+}
+/* uncomment to get rid of most premium content */
+/*
+.premium,
+.modal.dim {
+    display: none !important;
+}
+*/
+
+* {
+    outline: none !important;
+    border: none !Important;
+    box-shadow: none !important;
+}
+/* base content */
+body,
+div#home-wrap, 
+.home-content, 
+.home, 
+.panel, 
+#zoom-menu, 
+#workspace, 
+#template-preview-holder, 
+#layer-panel-bottom {
+    background: var(--base) !important;
+    outline: none !important;
+    border: none !important;
+}
+
+/* mantle content */
+.welcome-text, 
+.flatbox, 
+.menu-section, 
+.content, 
+header, 
+.title,
+.float,
+.buttons, 
+.switch, 
+.option-bar, 
+#menu-bar, 
+#panel-bar, 
+#right-bar, 
+#horizontal-image-info, 
+#horizontal-scroll-holder,
+#font-list,
+#layer-settings,
+.apreset-page,
+.option-task,
+#tab-bar,
+.subline,
+#horizontal-scroll-slider, 
+#vertical-scroll-slider, 
+#animation-settings,
+#animation-segments,
+.button.white,
+.button.big.white{
+    background: var(--mantle) !important;
+    color: var(--text) !important;
+}
+
+/* crust content */
+.menu, 
+#arrange-width,
+.switch-field label, 
+.switch-icon-field label,
+.menu ul, 
+.overflow-menu ul,
+.menu label:hover,
+.icon-button-set > li,
+#resize-preview,
+.option-task.active .settings,
+.option-task .switch,
+.option-task .slider-holder,
+#tabs li.active,
+.brush-editor,
+.brush-editor .slider-holder,
+.brush-preview-holder,
+.brush-stroke-holder,
+.apreset-layer, .plan-details, .top-5 {
+    background: var(--crust) !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: var(--text) !important;
+}
+
+/* accented content */
+.layer.selected,
+.history-item.selected,
+.switch-field input:checked + label, 
+.switch-icon-field input:checked + label,
+.shortcut.positive,
+.active-image,
+.reko,
+.button .positive,
+.apreset-layer.enter.selected,
+.plan-header,
+.button.big {
+    background: var(--accent) !important;
+}
+
+/* trans elements */
+.center, 
+.tag,
+#template-preview-category, 
+#menu,
+#template-preview-category, 
+#menu, 
+.splitter,
+.slider-holder, .announce  {
+    background: var(--mantle) !important;
+    color: var(--text) !important;
+    outline: none !important;
+}
+
+/* accented text */
+.anchor, a.anchor {
+    color: var(--accent) !important;
+    text-decoration: none !important;
+}

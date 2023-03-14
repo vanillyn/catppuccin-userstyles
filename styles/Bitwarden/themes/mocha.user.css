@@ -1,1 +1,42 @@
-/* add here! */
+:root {
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --accent: #cba6f7;
+    --text: #cdd6f4;
+}
+
+.tw-container,  body {
+    background: var(--base) !important;
+}
+.tw-bg-background, .card-body, .navbar, .modal-body, .tw-bg-background-alt2, .list-group-item, a.list-group-item, a.nav-link, tr, .org-nav, .callout, #pickerButton {
+    background: var(--mantle) !important;
+    color: var(--text) !important;
+}
+.card-header, .modal-header, .modal-footer {
+    background: var(--crust) !important;
+    color: var(--text) !important;
+}
+bit-callout, .tw-border-l-warning-500 {
+    background: var(--mantle) !important;
+    border-radius: 25px !important;
+}
+.tw-bg-primary-500, .btn-primary, .btn-outline-danger, .btn {
+    background: var(--accent) !important;
+    border: none !important;
+}
+.bwi-eye {
+    color: #916abf !important;
+}
+.ml-2, .tw-text-main, .tw-text-xl {
+    color: var(--text) !important;
+}
+
+bit-hint, a, .\!tw-text-warning {
+    text-decoration: none !important;
+    color: var(--accent) !important;
+}
+* {
+    border: none !important;
+    color: var(--text) !important;
+}
