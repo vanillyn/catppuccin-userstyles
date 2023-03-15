@@ -1,0 +1,166 @@
+/* ==UserStyle==
+@name Gelbooru Catppuccin-Mocha
+@namespace https://github.com/vanillyn
+@description Soothing pastel theme for Gelbooru.
+@preprocessor stylus
+@author Vanillyn
+@license GNU-V3.0
+@version 0.9
+@var select theme "Theme" ["Latte", "Frappe", "Macchiato", "Mocha*"]
+==/UserStyle== */
+
+@-moz-document domain("gelbooru.com") {
+    if (theme=="Mocha") {
+        $base=#1e1e2e 
+        $mantle=#181825 
+        $crust=#11111b 
+        $red=#f38ba8 
+        $mauve=#cba6f7 
+        $green=#a6e3a1 
+        $blue=#89b4fa
+        $grey=#45475a 
+        $teal=#94e2d5 
+        $text=#cdd6f4
+    }
+
+    else if (theme=="Macchiato") {
+        $base=#24273a 
+        $mantle=#1e2030 
+        $crust=#181926 
+        $red=#ed8796 
+        $mauve=#c6a0f6 
+        $green=#a6da95 
+        $blue=#8aadf4c 
+        $grey=#494d64 
+        $teal=#8bd5ca 
+        $text=#cad3f5
+    }
+
+    else if (theme=="Frappe") {
+        $base=#303446 
+        $mantle=#292c3c 
+        $crust=#232634 
+        $red=#e78284 
+        $mauve=#ca9ee6 
+        $green=#a6d189 
+        $blue=#8caaee 
+        $grey=#51576d 
+        $teal=#81c8be 
+        $text=#c6d0f5
+    }
+
+    else if (theme=="Latte") {
+        $base=#eff1f5 
+        $mantle=#e6e9ef 
+        $crust=#dce0e8 
+        $red=#d20f39 
+        $mauve=#8839ef 
+        $green=#40a02b 
+        $blue=#1e66f5 
+        $grey=#1e1e2e 
+        $teal=#179299 
+        $text=#4c4f69
+    }
+
+    :root {
+        --red: $red;
+        --mauve: $mauve;
+        --green: $green;
+        --blue: $blue;
+        --grey: $grey;
+        --teal: $teal;
+        --base: $base;
+        --mantle: $mantle;
+        --crust: $crust;
+        --text: $text;
+    }
+
+    *, 
+    .topnav a, 
+    .navSubmenu a {
+        border: none !important;
+        color: var(--text);
+    }
+
+    .topnav,
+    .aside,
+    .searchArea,
+    .searchList,
+    .commentBody {
+        background-color: var(--crust);
+        color: var(--text) !important;
+    }
+
+    .navSubmenu,
+    .ui-autocomplete-input {
+        background-color: var(--mantle);
+        color: var(--text);
+    }
+
+    .thumbnail-container,
+    .alert,
+    .alert-info,
+    .aside,
+    div#container,
+    .topnav a:hover {
+        background-color: var(--base);
+    }
+
+    .footerAd {
+        display: none;
+    }
+
+    .topnav a.active {
+        background-color: var(--base);
+        color: var(--accent) !important;
+    }
+
+    .tag-type-artist > a,
+    a.tag-type-artist {
+        color: var(--red) !important;
+    }
+
+    .tag-type-copyright > a,
+    a.tag-type-copyright {
+        color: var(--mauve) !important;
+    }
+
+    .tag-type-character > a,
+    a.tag-type-character {
+        color: var(--green) !important;
+    }
+
+    .tag-type-tag,
+    .tag-type-general > a,
+    a.tag-type-tag {
+        color: var(--blue) !important;
+    }
+
+    .tag-type-metadata > a,
+    a.tag-type-metadata {
+        color: var(--orange) !important;
+    }
+
+    .tag-type-deprecated > a,
+    a.tag-type-deprecated {
+        color: var(--grey) !important;
+    }
+
+    #links {
+        color: var(--accent) !important;
+    }
+
+    .thumbnail-preview {
+        transition: transform 1s;
+    }
+
+    .thumbnail-preview:hover {
+        transform: scale(1.5);
+    }
+}
+@-moz-document url-prefix("https://gelbooru.com/index.php?page=post&s=view&id=") {
+    img:not(.homeIcon > img):not(.invert):not(#myTopnav > a > img[src="layout/lightbulb-fill.svg"]) {
+        background-image: url('data:image/gif;base64,R0lGODlhEAAQAIAAAMDAwP///yH5BAAAAAAALAAAAAAQABAAAAIfhG+hq4jM3IFLJhoswNly/XkcBpIiVaInlLJr9FZWAQA7');
+        background-size: auto!important;
+    }
+}

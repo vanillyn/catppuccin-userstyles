@@ -1,0 +1,130 @@
+/* ==UserStyle==
+@name           Catppuccin Pixlr X
+@namespace      github.com/vanillyn/catppuccin-userstyles
+@version        1
+@description    Soothing pastel theme for Pixlr X!
+@author         Vanillyn
+@license        MIT
+@preprocessor   stylus
+@var select theme "Theme" ["Latte", "Frappe", "Macchiato", "Mocha*"]
+==/UserStyle== */
+@-moz-document url-prefix("https://pixlr.com/x/") {
+    if (theme=="Mocha") {
+        $base=#1e1e2e 
+        $mantle=#181825 
+        $crust=#11111b 
+        $accent=#f38ba8 
+        $text=#cdd6f4
+    }
+
+    else if (theme=="Macchiato") {
+        $base=#24273a 
+        $mantle=#1e2030 
+        $crust=#181926 
+        $accent=#ed8796 
+        $text=#cad3f5
+    }
+
+    else if (theme=="Frappe") {
+        $base=#303446
+        $mantle=#292c3c 
+        $crust=#232634 
+        $accent=#e78284 
+        $text=#c6d0f5
+    }
+
+    else if (theme=="Latte") {
+        $base=#eff1f5 
+        $mantle=#e6e9ef 
+        $crust=#dce0e8 
+        $accent=#d20f39 
+        $text=#4c4f69
+    }
+
+    :root {
+        --base: $base;
+        --mantle: $mantle;
+        --crust: $crust;
+        --accent: $accent;
+        --text: $text;
+    }
+    /* uncomment to get rid of most premium content */
+    /*
+.premium,
+.modal.dim {
+    display: none !important;
+}
+    /* base elements */
+    body,
+    div#home-wrap,
+    .home-content,
+    .home,
+    .panel,
+    header,
+    #zoom-menu,
+    #workspace,
+    #template-preview-holder {
+        background: var(--base) !important;
+        outline: none !important;
+        border: none !important;
+    }
+
+    /* mantle elements */
+    .flatbox,
+    .link,
+    .center,
+    #template-preview-category,
+    a.tag,
+    #menu-bar #layer-box,
+    #layer-box,
+    .splitter,
+    .dialog,
+    .tool-drawer,
+    #layer-settings,
+    #bottom-bar,
+    #box-tab #flarp,
+    #horizontal-scroll-holder,
+    #horizontal-image-info {
+        background: var(--mantle) !important;
+        fill: var(--mantle) !important;
+        color: var(--text) !important
+    }
+
+    /* crust elements */
+    .menu-icon,
+    #menu-bar .menu-icon > span,
+    #menu-bar .splitter,
+    #layer-box .splitter,
+    #menu-bar,
+    .title,
+    .layer-info,
+    .subline,
+    .push-buttons li,
+    .apreset-page, 
+    .switch-field label:last-of-type,
+    .icon-button-set > li,
+    #menu-bar .menu-icon > span, 
+    #menu-bar li > span,
+    #menu-bar li,
+    .option-task, 
+    .text-box, 
+    .switch-icon-field label,
+    .tool-drawer .switch-field label,
+    #effect-list li,
+    .icon {
+        background-color: var(--crust) !important;
+        border: none !important;
+    }
+
+    /* accented elements*/
+    .button.positive,
+    #home-menu li.selected,
+    .link:hover,
+    a.tag:hover,
+    .green,
+    .free-tag, 
+    .switch-field input:checked + label, 
+    .switch-icon-field input:checked + label {
+        background: var(--accent) !important;
+    }
+}
