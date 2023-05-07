@@ -8,13 +8,7 @@
 @var select theme "Theme" ["Latte", "Frappe", "Macchiato", "Mocha*"]
 @var select accent-color "Accent" ["Rosewater*", "Flamingo", "Pink", "Mauve", "Red", "Maroon", "Peach", "Yellow", "Green", "Teal", "Blue", "Sapphire", "Sky", "Lavender", "Gray"]
 ==/UserStyle== */
-
-@-moz-document regexp("https:\/\/(docs|script)\.google\.com(\/(document|spreadsheets|presentation|forms))?.*") {
-    /*  =========================================
-     * ===== COLORS ====
-     * -- An assignment of each of the colors from each theme to a variable.
-     * This script segment was taken directly from catppuccin/github, and there may be a more efficient or official way to do it
-    */
+@-moz-document regexp("https:\\/\\/(docs|script)\\.google\\.com(\\/(document|spreadsheets|presentation|forms))?.*") {
     if (theme=="Latte") {
     $type = light
     $rosewater = #dc8a78
@@ -179,19 +173,13 @@
 
 }
 
-@-moz-document regexp("https:\/\/docs\.google\.com(\/(document|spreadsheets|presentation|forms))?.*\/u\/.*") {
-/* ----- Main Page -----
- * https://docs.google.com/document/u/0
- * known bugs:
- * search button on the right is a bit fucky wucky
- * there may be some people who dont like the coloring on buttons
-*/
+@-moz-document regexp("https:\\/\\/docs\\.google\\.com(\\/(document|spreadsheets|presentation|forms))?.*\\/u\\/.*") {
+// ----- Main Page -----
 // Header
 .docs-homescreen-gb-container div,
-.gb_Ee button, .gb_Ze {
-    background-color: $crust;
+.gb_Ee button, .gb_Ee, gb_Lc .gb_Ee {
+    background-color: $crust !important;
     color: $text !important;
-    box-sizing: ;
 }
 
 .jfk-button-hover.jfk-button-clear-outline.docs-homescreen-templates-bar-back,
@@ -200,12 +188,11 @@
     color: $accent-color;
 }
 
-.gb_Ia svg,
-.gb_Qc svg,
-.gb_cd .gb_Nd,
-.gb_2c .gb_Nd {
-    color: $text;
-}
+
+.gb_Ee:not(.gb_Fe) input::-moz-placeholder, 
+input.gb_Ze:nth-child(1) {
+    color: $text !important;
+} 
 
 // Google Sidebar
 .goog-menuitem-highlight,
@@ -224,14 +211,17 @@
 
 .docs-homescreen-leftmenu-menuitem-text,
 .docs-homescreen-leftmenu-menuitem-icon,
+.gb_Ia svg,
+.gb_cd .gb_Nd, 
 .docs-homescreen-leftmenu-material-menu-header-text,
 .docs-homescreen-leftmenu-tos-link.ogb-link {
     color: $text;
     fill: $text;
 }
 
-.docs-homescreen-leftmenu-tos-links-container span, .gb_Ee button svg, .gb_f {
-    color: $accent-color;
+.docs-homescreen-leftmenu-tos-links-container span, .gb_Ee button svg, .gb_f, .gb_8e {
+    color: $accent-color !important;
+    fill: $accent-color !important;
 }
 .gssb_i>.gssb_a  {
     background-color: $crust;
@@ -246,7 +236,7 @@
 .docs-homescreen-leftmenu-menuseparator {
     border-top: 1px solid $accent-color
 }
-
+ 
 // --- Main Content
 
 .docs-hs-tmp-sch-content,
@@ -254,7 +244,7 @@
 .docs-homescreen-floater-list-header,
 .docs-homescreen-floater-header,
 .docs-homescreen-owner-filter-button.goog-menu-button-hover,
-.docs-homescreen-owner-filter-button.goog-menu-button-focused,
+.docs-homescreen-owner-filter-button.goog-menu-button-focused, 
 .docs-hs-tmp-sc-showcase .docs-homescreen-item-section,
 .docsshared-menu-bubble .goog-menu,
 .goog-menuitem .goog-menuitem-disabled {
@@ -293,7 +283,7 @@ body, .docs-homescreen-item-section,  .docs-homescreen-grid-header, .docs-homesc
 .docs-homescreen-grid-item {
     background-color: $mantle;
     border: none;
-
+    
 }
 .docs-homescreen-grid-item.goog-control-hover, .docs-homescreen-grid-item.goog-control-focused {
     border-color: $accent-color;
@@ -321,21 +311,21 @@ body, .docs-homescreen-item-section,  .docs-homescreen-grid-header, .docs-homesc
     color: $text;
 }
 
-// Settings
+// Settings 
 .goog-modalpopup, .modal-dialog, .docs-homescreen-settings, .docs-homescreen-settings-itemlabel, .docs-homescreen-settings-bidi-checkbox-wrapper, .docs-homescreen-settings-show-templates-checkbox-wrapper {
     background-color: $base;
     color: $text;
 }
 .docs-homescreen-settings a, a {
     color: $accent-color !important;
-
+ 
 }
-div.docs-material-gm-checkbox,
-span.docs-material-gm-checkbox,
-div.docs-material-gm-checkbox-checked,
-span.docs-material-gm-checkbox-checked,
-div.docs-material-gm-checkbox-undetermined,
-span.docs-material-gm-checkbox-undetermined,
+div.docs-material-gm-checkbox, 
+span.docs-material-gm-checkbox, 
+div.docs-material-gm-checkbox-checked, 
+span.docs-material-gm-checkbox-checked, 
+div.docs-material-gm-checkbox-undetermined, 
+span.docs-material-gm-checkbox-undetermined, 
 .docs-homescreen-settings .docs-homescreen-settings-ok-button {
       border: 2px solid $accent-color;
       background-color: $accent-color;
@@ -356,4 +346,122 @@ html[stylus-iframe="https://docs.google.com"] #yDmH0d {
     color: $text !important;
 }
 
+}
+
+@-moz-document regexp("https:\\/\\/docs\\.google\\.com\\/document\\/d.*") { 
+  // ------ DOCUMENTS ------
+  // Titlebar
+  .docs-grille-gm3 #docs-chrome:not(.docs-hub-chrome), .docs-grille #docs-header:not(.docs-hub-appbar) .docs-titlebar-buttons, .docs-grille .docs-material #docs-docos-commentsbutton.jfk-button.jfk-button-checked, .companion-guest-app-switcher {
+    background: $mantle;
+    color: $accent-color !important;
+  }
+  .docs-gm .docs-menubar .goog-control {
+    background: none !important;
+    color: $text;
+  }
+  .docs-gm .docs-menubar .goog-control:hover {
+    background: $crust;
+    color: $accent-color !important;
+  }
+  .docs-grille .docs-titlebar-badge .docs-save-indicator-icon:hover, .docs-grille .docs-titlebar-badge:hover, .app-switcher-button-icon, .companion-collapser-button,  {
+    background: $crust;
+    fill: $accent-color !important;
+  }
+  .docs-titlebar-badge, .docs-title-input, #docs-title-input-label-inner {
+    color: $accent-color !important;
+    text-decoration: none !important;
+    border: none !important;
+    text-shadow: none !important;
+  }
+  .docs-grille #docs-titlebar-share-client-button .jfk-button , .docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher {
+    background: $accent-color;
+    color: $base !important;
+  }
+.docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher.goog-toolbar-menu-button-hover, .docs-grille-gm3 #docs-omnibox-toolbar .docs-omnibox-input {
+  background: $crust; 
+  color: $text !important;
+  border: none !important;
+}
+.docos-streampane-container {
+  background: $accent-color !important;
+}
+.docs-gm .docos-streampane-header, .docos-xeditor .docos-streampane-content .docos-comment-text.docos-comment-header-title {
+  background: $mantle;
+  color: $text !important;
+}
+.docs-gm .docos-filter-settings .docs-material-menu-button-flat-default, .docs-gm .docos-new-comment-button.jfk-button-disabled {
+  background: $mantle;
+  color: $text;
+  border: none;
+}
+.docs-gm .docos-streampane-header, .docs-gm .docos-streampane-container .streampane-dragger, .docs-gm .docos-streampane-header-round-top-corners {
+  border: none !important;
+  border-radius: 0px 0px 0 0;
+}
+  
+// Scrollbar
+.docs-grille-gm3 .jfk-tooltip {
+  fill: $accent-color !important;
+  color: $accent-color !important;
+}
+// Toolbar
+.docs-grille-gm3.docs-gm .docs-material #docs-toolbar-wrapper, 
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button, 
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button, 
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-menu-button, 
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button.goog-toolbar-button-checked, 
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button-input,
+.goog-toolbar-button-checked, 
+.goog-palette-cell-selected, 
+.goog-toolbar-separator.goog-inline-block {
+    background: $mantle;
+    color: $text;
+    border: none !important;
+    
+  }
+.docs-grille-gm3 .trix-palette .goog-toolbar-menu-button-hover, 
+.docs-grille-gm3.docs-gm #docs-align-palette .goog-toolbar-button-hover, 
+.docs-grille-gm3.docs-gm .clean-palette .goog-palette-cell-hover, 
+.docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-button-hover, 
+.docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-menu-button-hover, 
+.docs-grille-gm3.docs-gm .docs-toolbar-zoom-combobox.goog-toolbar-combo-button-hover, 
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button-hover .goog-toolbar-combo-button-input:hover {
+    background: $crust;
+    color: $accent-color;
+  }
+  
+/* -- Main Content --
+*  I will not theme the background of the document itself, as that will not work.
+*  You can change the background of the document itself using the background tool in page settings. */
+// Ruler
+#kix-horizontal-ruler, 
+#kix-horizontal-ruler > div:nth-child(1) > div:nth-child(2), 
+#kix-vertical-ruler, 
+#kix-vertical-ruler > div:nth-child(1) > div:nth-child(2),
+#kix-horizontal-ruler-container, .docs-grille-gm3 #kix-vertical-ruler::before{
+  background: $base !important;
+  color: $text !important;
+  fill $text !important;
+}
+.docs-gm .docs-horizontal-ruler .docs-ruler-face-major-division, 
+.docs-gm .docs-horizontal-ruler .docs-ruler-face-minor-division, 
+.docs-gm .docs-vertical-ruler .docs-ruler-face-major-division, 
+.docs-gm .docs-vertical-ruler .docs-ruler-face-minor-division, 
+.docs-grille-gm3 .docs-ruler-face-number {
+  border-color: $text;
+  color: $text;
+}
+// Page content
+.kix-appview-editor {
+  background: $base !important;
+}
+.outline-refresh.navigation-widget-unified-styling .navigation-widget-empty-content, 
+.docs-grille-gm3 .navigation-widget-header, .navigation-widget-hide-control-container {
+  color: $text !important;
+  fill: $text !important;
+  font-style: normal !important;
+}
+.docs-grille-gm3 .kix-smart-summary-view-separator {
+  background: $accent-color;
+}
 }
