@@ -172,468 +172,607 @@
   }
 
 }
-
 @-moz-document regexp("https:\\/\\/docs\\.google\\.com(\\/(document|spreadsheets|presentation|forms))?.*\\/u\\/.*") {
-// ----- Main Page -----
-// Header
-.docs-homescreen-gb-container div,
-.gb_Ee button, .gb_Ee, gb_Lc .gb_Ee {
+  // ----- Main Page -----
+  // Header
+  .docs-homescreen-gb-container div,
+  .gb_Ee button,
+  .gb_Ee,
+  gb_Lc .gb_Ee {
     background-color: $crust !important;
     color: $text !important;
-}
+  }
 
-.jfk-button-hover.jfk-button-clear-outline.docs-homescreen-templates-bar-back,
-.jfk-button-focused.jfk-button-clear-outline.docs-homescreen-templates-bar-back {
+  .jfk-button-hover.jfk-button-clear-outline.docs-homescreen-templates-bar-back,
+  .jfk-button-focused.jfk-button-clear-outline.docs-homescreen-templates-bar-back {
     background-color: $mantle;
     color: $accent-color;
-}
+  }
 
 
-.gb_Ee:not(.gb_Fe) input::-moz-placeholder, 
-input.gb_Ze:nth-child(1) {
+  .gb_Ee:not(.gb_Fe) input::-moz-placeholder,
+  input.gb_Ze:nth-child(1) {
     color: $text !important;
-} 
+  }
 
-// Google Sidebar
-.goog-menuitem-highlight,
-.docs-homescreen-leftmenu-menuitem.goog-menuitem-highlight .docs-homescreen-leftmenu-menuitem-text {
+  // Google Sidebar
+  .goog-menuitem-highlight,
+  .docs-homescreen-leftmenu-menuitem.goog-menuitem-highlight .docs-homescreen-leftmenu-menuitem-text {
     background-color: $crust !important;
     color: $accent-color !important;
-}
+  }
 
-.docs-homescreen-leftmenu-material-menu-header-item,
-.docs-homescreen-material-bar-enabled .docs-homescreen-leftmenu,
-.docs-homescreen-leftmenu-menuitem-active-editor-name,
-.goog-menuitem {
+  .docs-homescreen-leftmenu-material-menu-header-item,
+  .docs-homescreen-material-bar-enabled .docs-homescreen-leftmenu,
+  .docs-homescreen-leftmenu-menuitem-active-editor-name,
+  .goog-menuitem {
     background-color: $crust;
     color: $text;
-}
+  }
 
-.docs-homescreen-leftmenu-menuitem-text,
-.docs-homescreen-leftmenu-menuitem-icon,
-.gb_Ia svg,
-.gb_cd .gb_Nd, 
-.docs-homescreen-leftmenu-material-menu-header-text,
-.docs-homescreen-leftmenu-tos-link.ogb-link {
+  .docs-homescreen-leftmenu-menuitem-text,
+  .docs-homescreen-leftmenu-menuitem-icon,
+  .gb_Ia svg,
+  .gb_cd .gb_Nd,
+  .docs-homescreen-leftmenu-material-menu-header-text,
+  .docs-homescreen-leftmenu-tos-link.ogb-link {
     color: $text;
     fill: $text;
-}
+  }
 
-.docs-homescreen-leftmenu-tos-links-container span, .gb_Ee button svg, .gb_f, .gb_8e {
+  .docs-homescreen-leftmenu-tos-links-container span,
+  .gb_Ee button svg,
+  .gb_f,
+  .gb_8e {
     color: $accent-color !important;
     fill: $accent-color !important;
-}
-.gssb_i>.gssb_a  {
+  }
+
+  .gssb_i > .gssb_a {
     background-color: $crust;
     border-left: 3px solid $accent-color;
-}
-.gssb_e, .gssb_m, .gsbb_c, .gb_Ee {
+  }
+
+  .gssb_e,
+  .gssb_m,
+  .gsbb_c,
+  .gb_Ee {
     background-color: $crust;
     border: none !important;
     outline: none !important;
     color: $text;
-}
-.docs-homescreen-leftmenu-menuseparator {
-    border-top: 1px solid $accent-color
-}
- 
-// --- Main Content
+  }
 
-.docs-hs-tmp-sch-content,
-.docs-homescreen-floater-grid-header,
-.docs-homescreen-floater-list-header,
-.docs-homescreen-floater-header,
-.docs-homescreen-owner-filter-button.goog-menu-button-hover,
-.docs-homescreen-owner-filter-button.goog-menu-button-focused, 
-.docs-hs-tmp-sc-showcase .docs-homescreen-item-section,
-.docsshared-menu-bubble .goog-menu,
-.goog-menuitem .goog-menuitem-disabled {
+  .docs-homescreen-leftmenu-menuseparator {
+    border-top: 1px solid $accent-color
+  }
+
+  // --- Main Content
+  .docs-hs-tmp-sch-content,
+  .docs-homescreen-floater-grid-header,
+  .docs-homescreen-floater-list-header,
+  .docs-homescreen-floater-header,
+  .docs-homescreen-owner-filter-button.goog-menu-button-hover,
+  .docs-homescreen-owner-filter-button.goog-menu-button-focused,
+  .docs-hs-tmp-sc-showcase .docs-homescreen-item-section,
+  .docsshared-menu-bubble .goog-menu,
+  .goog-menuitem .goog-menuitem-disabled {
     background-color: $mantle;
     color: $text;
-}
+  }
 
-.jfk-button.docs-hs-tmp-contractedheader-more,
-.docs-hs-tmp-contractedheader-actions .docsshared-menu-bubble,
-.docsshared-menu-bubble,
-.docs-homescreen-owner-filter-button,
-.docs-homescreen-floater-header-cell .docsshared-menu-bubble {
+  .jfk-button.docs-hs-tmp-contractedheader-more,
+  .docs-hs-tmp-contractedheader-actions .docsshared-menu-bubble,
+  .docsshared-menu-bubble,
+  .docs-homescreen-owner-filter-button,
+  .docs-homescreen-floater-header-cell .docsshared-menu-bubble {
     background-color: $crust;
     border: none;
     color: $text;
-}
+  }
 
-.docs-homescreen-templates-templateview-title,
-.goog-menu .goog-option-selected {
+  .docs-homescreen-templates-templateview-title,
+  .goog-menu .goog-option-selected {
     color: $text;
-}
+  }
 
-.docs-homescreen-templates-templateview-brandauthor,
-.docs-homescreen-templates-templateview-style,
-.goog-menuitem-checkbox,
-.goog-menuitem-icon {
+  .docs-homescreen-templates-templateview-brandauthor,
+  .docs-homescreen-templates-templateview-style,
+  .goog-menuitem-checkbox,
+  .goog-menuitem-icon {
     color: $subtext0;
-}
+  }
 
-// Document Selection
-body, .docs-homescreen-item-section,  .docs-homescreen-grid-header, .docs-homescreen-material-bar-enabled .docs-homescreen-item-container,  .docs-homescreen-homescreenmain{
+  // Document Selection
+  body,
+  .docs-homescreen-item-section,
+  .docs-homescreen-grid-header,
+  .docs-homescreen-material-bar-enabled .docs-homescreen-item-container,
+  .docs-homescreen-homescreenmain {
     background-color: $base;
-}
+  }
 
-// Documents
-.docs-homescreen-grid-item {
+  // Documents
+  .docs-homescreen-grid-item {
     background-color: $mantle;
     border: none;
-    
-}
-.docs-homescreen-grid-item.goog-control-hover, .docs-homescreen-grid-item.goog-control-focused {
+  }
+
+  .docs-homescreen-grid-item.goog-control-hover,
+  .docs-homescreen-grid-item.goog-control-focused {
     border-color: $accent-color;
-}
-.docs-homescreen-grid-item-title, .docs-homescreen-grid-item {
-    color: $text;
-}
-.docs-homescreen-grid-item-time-container, docs-homescreen-grid-item-sort-identifier, docs-homescreen-grid-item-time {
-    color: $subtext0 !important;
-}
+  }
 
-// List View
-.docs-homescreen-list-item, .docs-homescreen-list-item-icon, .docs-homescreen-grid-header, .docs-homescreen-list-header {
+  .docs-homescreen-grid-item-title,
+  .docs-homescreen-grid-item {
+    color: $text;
+  }
+
+  .docs-homescreen-grid-item-time-container,
+  .docs-homescreen-grid-item-sort-identifier,
+  .docs-homescreen-grid-item-time {
+    color: $subtext0 !important;
+  }
+
+  // List View
+  .docs-homescreen-list-item,
+  .docs-homescreen-list-item-icon,
+  .docs-homescreen-grid-header,
+  .docs-homescreen-list-header {
     background-color: $base;
     color: $text;
     border: none;
-}
-.docs-homescreen-list-item.goog-control-hover, .docs-homescreen-list-item.goog-control-focused {
-    background-color: $mantle;
-    border: none
-    outline: none
-}
-.docs-homescreen-material-bar-enabled .docs-homescreen-list-item-time,
-.docs-homescreen-list-item-owner {
-    color: $text;
-}
+  }
 
-// Settings 
-.goog-modalpopup, .modal-dialog, .docs-homescreen-settings, .docs-homescreen-settings-itemlabel, .docs-homescreen-settings-bidi-checkbox-wrapper, .docs-homescreen-settings-show-templates-checkbox-wrapper {
+  .docs-homescreen-list-item.goog-control-hover,
+  .docs-homescreen-list-item.goog-control-focused {
+    background-color: $mantle;
+    border: none;
+    outline: none;
+  }
+
+  .docs-homescreen-material-bar-enabled .docs-homescreen-list-item-time,
+  .docs-homescreen-list-item-owner {
+    color: $text;
+  }
+
+  // Settings 
+  .goog-modalpopup,
+  .modal-dialog,
+  .docs-homescreen-settings,
+  .docs-homescreen-settings-itemlabel,
+  .docs-homescreen-settings-bidi-checkbox-wrapper,
+  .docs-homescreen-settings-show-templates-checkbox-wrapper {
     background-color: $base;
     color: $text;
-}
-.docs-homescreen-settings a, a {
+  }
+
+  .docs-homescreen-settings a,
+  a {
     color: $accent-color !important;
- 
-}
-div.docs-material-gm-checkbox, 
-span.docs-material-gm-checkbox, 
-div.docs-material-gm-checkbox-checked, 
-span.docs-material-gm-checkbox-checked, 
-div.docs-material-gm-checkbox-undetermined, 
-span.docs-material-gm-checkbox-undetermined, 
-.docs-homescreen-settings .docs-homescreen-settings-ok-button {
-      border: 2px solid $accent-color;
-      background-color: $accent-color;
-      color: $base;
- }
- .docs-homescreen-settings .docs-homescreen-settings-ok-button.jfk-button-hover {
-     background-color: $accent-color;
-     color: $text;
- }
-.docs-homescreen-settings-dialog.docs-homescreen-modaldialog .modal-dialog-title {
+  }
+
+  div.docs-material-gm-checkbox,
+  span.docs-material-gm-checkbox,
+  div.docs-material-gm-checkbox-checked,
+  span.docs-material-gm-checkbox-checked,
+  div.docs-material-gm-checkbox-undetermined,
+  span.docs-material-gm-checkbox-undetermined,
+  .docs-homescreen-settings .docs-homescreen-settings-ok-button {
+    border: 2px solid $accent-color;
+    background-color: $accent-color;
+    color: $base;
+  }
+
+  .docs-homescreen-settings .docs-homescreen-settings-ok-button.jfk-button-hover {
+    background-color: $accent-color;
+    color: $text;
+  }
+
+  .docs-homescreen-settings-dialog.docs-homescreen-modaldialog .modal-dialog-title {
     background-color: $mantle;
     color: $text;
-}
+  }
 
-// Google iFrames (doesn't work)
-html[stylus-iframe="https://docs.google.com"] #yDmH0d {
+  // Google iFrames (doesn't work)
+  html[stylus-iframe="https://docs.google.com"] #yDmH0d {
     background-color: $mantle !important;
     color: $text !important;
+  }
 }
 
-}
-
-@-moz-document regexp("https:\\/\\/docs\\.google\\.com\\/document\\/d.*") { 
+@-moz-document regexp("https:\\/\\/docs\\.google\\.com\\/document\\/d.*") {
   // ------ DOCUMENTS ------
   // Titlebar
-  .docs-grille-gm3 #docs-chrome:not(.docs-hub-chrome), .docs-grille #docs-header:not(.docs-hub-appbar) .docs-titlebar-buttons, .docs-grille .docs-material #docs-docos-commentsbutton.jfk-button.jfk-button-checked, .companion-guest-app-switcher {
+  .docs-grille-gm3 #docs-chrome:not(.docs-hub-chrome),
+  .docs-grille #docs-header:not(.docs-hub-appbar) .docs-titlebar-buttons,
+  .docs-grille .docs-material #docs-docos-commentsbutton.jfk-button.jfk-button-checked,
+  .companion-guest-app-switcher {
     background: $mantle;
     color: $accent-color !important;
   }
+
   .docs-gm .docs-menubar .goog-control {
     background: none !important;
     color: $text;
   }
+
   .docs-gm .docs-menubar .goog-control:hover {
     background: $crust;
     color: $accent-color !important;
   }
-  .docs-grille .docs-titlebar-badge .docs-save-indicator-icon:hover, .docs-grille .docs-titlebar-badge:hover, .app-switcher-button-icon, .companion-collapser-button,  {
+
+  .docs-grille .docs-titlebar-badge .docs-save-indicator-icon:hover,
+  .docs-grille .docs-titlebar-badge:hover,
+  .app-switcher-button-icon,
+  .companion-collapser-button,
+  {
     background: $crust;
     fill: $accent-color !important;
   }
-  .docs-titlebar-badge, .docs-title-input, #docs-title-input-label-inner {
+
+  .docs-titlebar-badge,
+  .docs-title-input,
+  #docs-title-input-label-inner {
     color: $accent-color !important;
     text-decoration: none !important;
     border: none !important;
     text-shadow: none !important;
   }
-  .docs-grille #docs-titlebar-share-client-button .jfk-button , .docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher {
+
+  .docs-grille #docs-titlebar-share-client-button .jfk-button,
+  .docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher {
     background: $accent-color;
     color: $base !important;
   }
-.docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher.goog-toolbar-menu-button-hover, .docs-grille-gm3 #docs-omnibox-toolbar .docs-omnibox-input {
-  background: $crust; 
-  color: $text !important;
-  border: none !important;
-}
-.docos-streampane-container {
-  background: $accent-color !important;
-}
-.docs-gm .docos-streampane-header, .docos-xeditor .docos-streampane-content .docos-comment-text.docos-comment-header-title {
-  background: $mantle;
-  color: $text !important;
-}
-.docs-gm .docos-filter-settings .docs-material-menu-button-flat-default, .docs-gm .docos-new-comment-button.jfk-button-disabled {
-  background: $mantle;
-  color: $text;
-  border: none;
-}
-.docs-gm .docos-streampane-header, .docs-gm .docos-streampane-container .streampane-dragger, .docs-gm .docos-streampane-header-round-top-corners {
-  border: none !important;
-  border-radius: 0px 0px 0 0;
-}
-  
-// Scrollbar
-.docs-grille-gm3 .jfk-tooltip {
-  fill: $accent-color !important;
-  color: $accent-color !important;
-}
-// Toolbar
-.docs-grille-gm3.docs-gm .docs-material #docs-toolbar-wrapper, 
-.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button, 
-.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button, 
-.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-menu-button, 
-.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button.goog-toolbar-button-checked, 
-.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button-input,
-.goog-toolbar-button-checked, 
-.goog-palette-cell-selected, 
-.goog-toolbar-separator.goog-inline-block {
+
+  .docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher.goog-toolbar-menu-button-hover,
+  .docs-grille-gm3 #docs-omnibox-toolbar .docs-omnibox-input {
+    background: $crust;
+    color: $text !important;
+    border: none !important;
+  }
+
+  .docos-streampane-container {
+    background: $accent-color !important;
+  }
+
+  .docs-gm .docos-streampane-header,
+  .docos-xeditor .docos-streampane-content .docos-comment-text.docos-comment-header-title {
+    background: $mantle;
+    color: $text !important;
+  }
+
+  .docs-gm .docos-filter-settings .docs-material-menu-button-flat-default,
+  .docs-gm .docos-new-comment-button.jfk-button-disabled {
+    background: $mantle;
+    color: $text;
+    border: none;
+  }
+
+  .docs-gm .docos-streampane-header,
+  .docs-gm .docos-streampane-container .streampane-dragger,
+  .docs-gm .docos-streampane-header-round-top-corners {
+    border: none !important;
+    border-radius: 0px 0px 0 0;
+  }
+
+  // Scrollbar
+  .docs-grille-gm3 .jfk-tooltip {
+    fill: $accent-color !important;
+    color: $accent-color !important;
+  }
+
+  // Toolbar
+  .docs-grille-gm3.docs-gm .docs-material #docs-toolbar-wrapper,
+  .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button,
+  .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button,
+  .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-menu-button,
+  .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button.goog-toolbar-button-checked,
+  .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button-input,
+  .goog-toolbar-button-checked,
+  .goog-palette-cell-selected,
+  .goog-toolbar-separator.goog-inline-block {
     background: $mantle;
     color: $text;
     border: none !important;
-    
   }
-.docs-grille-gm3 .trix-palette .goog-toolbar-menu-button-hover, 
-.docs-grille-gm3.docs-gm #docs-align-palette .goog-toolbar-button-hover, 
-.docs-grille-gm3.docs-gm .clean-palette .goog-palette-cell-hover, 
-.docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-button-hover, 
-.docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-menu-button-hover, 
-.docs-grille-gm3.docs-gm .docs-toolbar-zoom-combobox.goog-toolbar-combo-button-hover, 
-.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button-hover .goog-toolbar-combo-button-input:hover {
+
+  .docs-grille-gm3 .trix-palette .goog-toolbar-menu-button-hover,
+  .docs-grille-gm3.docs-gm #docs-align-palette .goog-toolbar-button-hover,
+  .docs-grille-gm3.docs-gm .clean-palette .goog-palette-cell-hover,
+  .docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-button-hover,
+  .docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-menu-button-hover,
+  .docs-grille-gm3.docs-gm .docs-toolbar-zoom-combobox.goog-toolbar-combo-button-hover,
+  .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button-hover .goog-toolbar-combo-button-input:hover {
     background: $crust;
     color: $accent-color;
   }
-  
-/* -- Main Content --
+
+  /* -- Main Content --
 *  I will not theme the background of the document itself, as that will not work.
 *  You can change the background of the document itself using the background tool in page settings. */
-// Ruler
-#kix-horizontal-ruler, 
-#kix-horizontal-ruler > div:nth-child(1) > div:nth-child(2), 
-#kix-vertical-ruler, 
-#kix-vertical-ruler > div:nth-child(1) > div:nth-child(2),
-#kix-horizontal-ruler-container, .docs-grille-gm3 #kix-vertical-ruler::before, 
-.docs-grille-gm3 .kix-smart-summary-text-container {
-  background: $base !important;
-  color: $text !important;
-  fill $text !important;
-}
-.docs-grille-gm3 .docs-horizontal-ruler,
- .docs-grille-gm3 .docs-vertical-ruler{
-  border: none
-}
-.docs-gm .docs-horizontal-ruler .docs-ruler-face-major-division, 
-.docs-gm .docs-horizontal-ruler .docs-ruler-face-minor-division, 
-.docs-gm .docs-vertical-ruler .docs-ruler-face-major-division, 
-.docs-gm .docs-vertical-ruler .docs-ruler-face-minor-division, 
-.docs-grille-gm3 .docs-ruler-face-number {
-  border-color: $text;
-  color: $text;
-}
-// Page content
-.kix-appview-editor, .docs-grille-gm3 #docs-editor-container {
-  background: $base !important;
-}
-.docs-grille-gm3 .kix-page-paginated {
-  outline: none;
-}
-.outline-refresh.navigation-widget-unified-styling .navigation-widget-empty-content, 
-.docs-grille-gm3 .navigation-widget-header, .navigation-widget-hide-control-container {
-  color: $text !important;
-  fill: $text !important;
-  font-style: normal !important;
-}
-.docs-grille-gm3 .kix-smart-summary-view-separator {
-  background: $accent-color;
-}
-// Modals
-.docs-gm #docs-offline-optinpromo-description, 
-.docs-gm #docs-offline-optinpromo-learn-more-container, 
-.docs-gm .modal-dialog, 
-.docs-gm .modal-dialog-content, 
-.docs-gm .modal-dialog.google-url-picker, 
-.docs-gm .modal-dialog-title-text, 
-.modal-dialog-title, 
-.docs-gm .modal-dialog button {
-  color: $text;
-  background: $mantle;
-  border: none !important;
-}
-.modal-dialog-title-close, .modal-dialog-title-close:hover {
-  color: $text !important;
-  background: $base;
-  content: url(https://raw.githubusercontent.com/vanillyn/catppuccin-userstyles/main/styles/Google/docs/close_18px.svg);
-}
-.docs-gm .modal-dialog .jfk-button-standard.jfk-button-hover, .docs-gm .modal-dialog button:hover {
-  background: $crust !important;
-  color: $text !important;
-  border: none !important;
-}
-.docs-gm .docs-material-bubble .jfk-button-action, .docs-gm .modal-dialog .goog-buttonset-action, .docs-gm .modal-dialog .jfk-button-action {
-  background: $accent-color !important
-  color: $base
-  border: none !important
-}
-// Word count
-.docs-gm .kix-documentmetricsdialog-row, .docs-material-gm-labeled-checkbox .docs-material-gm-labeled-checkbox-label {
-  border: none;
-  color: $text;
-}
-.docs-material-gm-labeled-checkbox-checkbox {
-  border: 2px solid $accent-color
-}
-.docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-checked, .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-undetermined {
-  background: $accent-color
-  border: 2px solid $accent-color
-}
-// Suggestions
-.docs-checkupdialog-content-container {
-  background: $mantle;
-  color: $text;
-}
-.docs-material-button-hairline-primary.docs-material-button, .docs-material-button-disabled.docs-material-button-flat-default, .docs-material-button-disabled.docs-material-button-flat-primary, .docs-material-button-disabled.docs-material-button-raised-default, .docs-slidingdialog {
-  background: $mantle;
-  color: $text !important;
-  border: none !important;
-}
-// Bubble
-.docs-grille-gm3 #docs-instant-bubble {
-  background: $mantle !important
-  box-shadow: none !important;
-}
-.docs-grille-gm3 .instant-button:hover {
-  background: $crust !important
-}
-.docs-grille .docs-material .docs-icon-img {
-  fill: $accent-color !important;
-}
-// compare documents
-.kix-comparisondialog-select-doc-button {
-  border: none;
-}
-.docs-gm .modal-dialog .jfk-textinput:focus,
- .docs-gm .docs-material-gm-dialog .jfk-textinput:focus {
-  border: 2px solid $accent-color
-  background: $crust
-  color: $text !important;
-}
-.docs-gm .modal-dialog .jfk-textinput,
- .docs-gm .docs-material-gm-dialog .jfk-textinput {
-  border: none
-  background: $mantle
-  color: $text !important;
-}
-div.docs-material-gm-checkbox,span.docs-material-gm-checkbox{border: 2px solid $accent-color}
-div.docs-material-gm-checkbox-checked {background:$accent-color;}
-a{color:$accent-color!important;}
-// translation
-.docs-material-gm-dialog,.docs-material-gm-dialog-title-text,.docs-gm .kix-translatedialog-desc {
+  // Ruler
+  #kix-horizontal-ruler,
+  #kix-horizontal-ruler > div:nth-child(1) > div:nth-child(2),
+  #kix-vertical-ruler,
+  #kix-vertical-ruler > div:nth-child(1) > div:nth-child(2),
+  #kix-horizontal-ruler-container,
+  .docs-grille-gm3 #kix-vertical-ruler::before,
+  .docs-grille-gm3 .kix-smart-summary-text-container {
+    background: $base !important;
+    color: $text !important;
+    fill $text !important;
+  }
+
+  .docs-grille-gm3 .docs-horizontal-ruler,
+  .docs-grille-gm3 .docs-vertical-ruler {
+    border: none
+  }
+
+  .docs-gm .docs-horizontal-ruler .docs-ruler-face-major-division,
+  .docs-gm .docs-horizontal-ruler .docs-ruler-face-minor-division,
+  .docs-gm .docs-vertical-ruler .docs-ruler-face-major-division,
+  .docs-gm .docs-vertical-ruler .docs-ruler-face-minor-division,
+  .docs-grille-gm3 .docs-ruler-face-number {
+    border-color: $text;
+    color: $text;
+  }
+
+  // Page content
+  .kix-appview-editor,
+  .docs-grille-gm3 #docs-editor-container {
+    background: $base !important;
+  }
+
+  .docs-grille-gm3 .kix-page-paginated {
+    outline: none;
+  }
+
+  .outline-refresh.navigation-widget-unified-styling .navigation-widget-empty-content,
+  .docs-grille-gm3 .navigation-widget-header,
+  .navigation-widget-hide-control-container {
+    color: $text !important;
+    fill: $text !important;
+    font-style: normal !important;
+  }
+
+  .docs-grille-gm3 .kix-smart-summary-view-separator {
+    background: $accent-color;
+  }
+
+  // Modals
+  .docs-gm #docs-offline-optinpromo-description,
+  .docs-gm #docs-offline-optinpromo-learn-more-container,
+  .docs-gm .modal-dialog,
+  .docs-gm .modal-dialog-content,
+  .docs-gm .modal-dialog.google-url-picker,
+  .docs-gm .modal-dialog-title-text,
+  .modal-dialog-title,
+  .docs-gm .modal-dialog button {
+    color: $text;
+    background: $mantle;
+    border: none !important;
+  }
+
+  .modal-dialog-title-close,
+  .modal-dialog-title-close:hover {
+    color: $text !important;
+    background: $base;
+  }
+
+  .docs-gm .modal-dialog .jfk-button-standard.jfk-button-hover,
+  .docs-gm .modal-dialog button:hover {
+    background: $crust !important;
+    color: $text !important;
+    border: none !important;
+  }
+
+  .docs-gm .docs-material-bubble .jfk-button-action,
+  .docs-gm .modal-dialog .goog-buttonset-action,
+  .docs-gm .modal-dialog .jfk-button-action {
+    background: $accent-color !important; 
+    color: $base;
+    border: none !important
+  }
+
+  // Word count
+  .docs-gm .kix-documentmetricsdialog-row,
+  .docs-material-gm-labeled-checkbox .docs-material-gm-labeled-checkbox-label {
+    border: none;
+    color: $text;
+  }
+
+  .docs-material-gm-labeled-checkbox-checkbox {
+    border: 2px solid $accent-color
+  }
+
+  .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-checked,
+  .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-undetermined {
+    background: $accent-color;
+    border: 2px solid $accent-color
+  }
+
+  // Suggestions
+  .docs-checkupdialog-content-container {
+    background: $mantle;
+    color: $text;
+  }
+
+  .docs-material-button-hairline-primary.docs-material-button,
+  .docs-material-button-disabled.docs-material-button-flat-default,
+  .docs-material-button-disabled.docs-material-button-flat-primary,
+  .docs-material-button-disabled.docs-material-button-raised-default,
+  .docs-slidingdialog {
     background: $mantle;
     color: $text !important;
-}
-.docs-gm .kix-translatedialog-label {
-  color: $subtext0;
-}
-.docs-gm .docs-material-gm-dialog .goog-flat-menu-button, .docs-gm .docs-material-gm-dialog .goog-flat-menu-button-caption {
-  border: none
-  color: $text !important;
-}
-// notifications
-.docos-ssd-content p, .docos-ssd-radio-button-group .jfk-radiobutton-label label {
-  color: $text
-}
-.docos-ssd-radio-button-group .jfk-radiobutton-label span {
-  color: $subtext0
-}
-.docos-ssd-radio-button-group .jfk-radiobutton-checked .jfk-radiobutton-label label {
-  color: $accent-color
-}
-.docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton-checked .jfk-radiobutton-radio {
-  border-color: $accent-color !important;
-}
-docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton-checked.jfk-radiobutton .jfk-radiobutton-radio::after, .jfk-radiobutton-checked .jfk-radiobutton-radio::after {
-  background-color: $accent-color !important;
-  border-color: $accent-color !important;
-}
-.docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton .jfk-radiobutton-radio {
-  border: 2px solid $text
-}
-// preferences
-.docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tab-selected .docs-tabbar-tablabel, .docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tab-selected .docs-tabbar-tablabel:hover {
-  color: $accent-color;
-}
-.docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tab-selected::before {
-  border-top: 3px solid $accent-color
-}
-.docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tablabel,
- .docs-gm .docs-preferencesdialog-list-title{
-  color: $text
-}
-.docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tablabel:hover {
-  color: $subtext0 !important;
-}
-.docs-gm .docs-preferencesdialog-list-body {
-  background: $mantle
-}
-// citations
-.docs-grille-gm3 .kix-citations-sidebar-titlebar,
-.docs-material-gm-select-hover .docs-material-gm-select-outer-box,
-.docs-material-gm-select-hover {
-  background: $crust;
-  color: $text;
-  border: none !important;
-}
-.kix-citations-create-view-search, 
-.kix-citations-create-view-top, 
-.kix-citations-list-view-top, 
-.docs-material-gm-select-outer-box,
- .kix-citations-accessed-by-select, .kix-citations-format-select, .kix-citations-select, .kix-citations-source-type-select{
-  background: $mantle;
-  color: $text !important;
-  border: none
-}
-.kix-citations-add-source-button.goog-flat-button, .kix-citations-flat-button.goog-flat-button, .kix-citations-add-source-button-icon-path, .docs-gm .docs-gm-sidebar-icon-path {
-  color: $accent-color !important;
-  fill: $accent-color !important
-}
-.docs-material-gm-select-caption,
- .kix-citations-create-view-zero-state-content, .kix-citations-source-list-zero-state-content, 
-.kix-citations-accessed-by-select-label, .kix-citations-label, .kix-citations-source-type-select-label {
-  color: $text !important;
-}
-.kix-citations-source-list, .kix-citations-source-list-zero-state-heading, .kix-citations-create-view-zero-state{
-  background: $base;
-  color: $text !important;
-  border: none
-  border-radius: 0px 0px 0 0 !important;
-}
-.kix-citations-source-list-zero-state-content {
-  color: $subtext0 !important
-}
+    border: none !important;
+  }
+
+  // Bubble
+  .docs-grille-gm3 #docs-instant-bubble {
+    background: $mantle !important;
+    box-shadow: none !important;
+  }
+
+  .docs-grille-gm3 .instant-button:hover {
+    background: $crust !important
+  }
+
+  .docs-grille .docs-material .docs-icon-img {
+    fill: $accent-color !important;
+  }
+
+  // compare documents
+  .kix-comparisondialog-select-doc-button {
+    border: none;
+  }
+
+  .docs-gm .modal-dialog .jfk-textinput:focus,
+  .docs-gm .docs-material-gm-dialog .jfk-textinput:focus {
+    border: 2px solid $accent-color;
+    background: $crust;
+    color: $text !important;
+  }
+
+  .docs-gm .modal-dialog .jfk-textinput,
+  .docs-gm .docs-material-gm-dialog .jfk-textinput {
+    border: none;
+    background: $mantle; 
+    color: $text !important;
+  }
+
+  div.docs-material-gm-checkbox,
+  span.docs-material-gm-checkbox {
+    border: 2px solid $accent-color
+  }
+
+  div.docs-material-gm-checkbox-checked {
+    background: $accent-color;
+  }
+
+  a {
+    color: $accent-color!important;
+  }
+
+  // translation
+  .docs-material-gm-dialog,
+  .docs-material-gm-dialog-title-text,
+  .docs-gm .kix-translatedialog-desc {
+    background: $mantle;
+    color: $text !important;
+  }
+
+  .docs-gm .kix-translatedialog-label {
+    color: $subtext0;
+  }
+
+  .docs-gm .docs-material-gm-dialog .goog-flat-menu-button,
+  .docs-gm .docs-material-gm-dialog .goog-flat-menu-button-caption {
+    border: none;
+    color: $text !important;
+  }
+
+  // notifications
+  .docos-ssd-content p,
+  .docos-ssd-radio-button-group .jfk-radiobutton-label label {
+    color: $text
+  }
+
+  .docos-ssd-radio-button-group .jfk-radiobutton-label span {
+    color: $subtext0
+  }
+
+  .docos-ssd-radio-button-group .jfk-radiobutton-checked .jfk-radiobutton-label label {
+    color: $accent-color
+  }
+
+  .docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton-checked .jfk-radiobutton-radio {
+    border-color: $accent-color !important;
+  }
+
+  docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton-checked.jfk-radiobutton .jfk-radiobutton-radio::after,
+  .jfk-radiobutton-checked .jfk-radiobutton-radio::after {
+    background-color: $accent-color !important;
+    border-color: $accent-color !important;
+  }
+
+  .docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton .jfk-radiobutton-radio {
+    border: 2px solid $text
+  }
+
+  // preferences
+  .docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tab-selected .docs-tabbar-tablabel,
+  .docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tab-selected .docs-tabbar-tablabel:hover {
+    color: $accent-color;
+  }
+
+  .docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tab-selected::before {
+    border-top: 3px solid $accent-color
+  }
+
+  .docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tablabel,
+  .docs-gm .docs-preferencesdialog-list-title {
+    color: $text
+  }
+
+  .docs-preferencesdialog-tabbed-menu-tabbar .docs-tabbar-tablabel:hover {
+    color: $subtext0 !important;
+  }
+
+  .docs-gm .docs-preferencesdialog-list-body {
+    background: $mantle
+  }
+
+  // citations
+  .docs-grille-gm3 .kix-citations-sidebar-titlebar,
+  .docs-material-gm-select-hover .docs-material-gm-select-outer-box,
+  .docs-material-gm-select-hover {
+    background: $crust;
+    color: $text;
+    border: none !important;
+  }
+
+  .kix-citations-create-view-search,
+  .kix-citations-create-view-top,
+  .kix-citations-list-view-top,
+  .docs-material-gm-select-outer-box,
+  .kix-citations-accessed-by-select,
+  .kix-citations-format-select,
+  .kix-citations-select,
+  .kix-citations-source-type-select {
+    background: $mantle;
+    color: $text !important;
+    border: none
+  }
+
+  .kix-citations-add-source-button.goog-flat-button,
+  .kix-citations-flat-button.goog-flat-button,
+  .kix-citations-add-source-button-icon-path,
+  .docs-gm .docs-gm-sidebar-icon-path {
+    color: $accent-color !important;
+    fill: $accent-color !important
+  }
+
+  .docs-material-gm-select-caption,
+  .kix-citations-create-view-zero-state-content,
+  .kix-citations-source-list-zero-state-content,
+  .kix-citations-accessed-by-select-label,
+  .kix-citations-label,
+  .kix-citations-source-type-select-label {
+    color: $text !important;
+  }
+
+  .kix-citations-source-list,
+  .kix-citations-source-list-zero-state-heading,
+  .kix-citations-create-view-zero-state {
+    background: $base;
+    color: $text !important;
+    border: none 
+    border-radius: 0px 0px 0 0 !important;
+  }
+
+  .kix-citations-source-list-zero-state-content {
+    color: $subtext0 !important
+  }
 }
