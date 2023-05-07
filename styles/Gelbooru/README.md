@@ -3,7 +3,7 @@
 <h3 align="center">
 	<img src="assets/ctp-unofficial.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://gelbooru.com">Gelbooru</a>
+	(Not) Catppuccin for <a href="https://gelbooru.com">Gelbooru</a>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
