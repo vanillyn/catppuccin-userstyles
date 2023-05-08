@@ -19,7 +19,7 @@
 # Finished
 ## <3 catppuccin for [chrome](https://github.com/catppuccin/chrome) created by tuhanayim and elkrien
 ## <3 catppuccin for [go](https://github.com/catppuccin/go) created by caarlos0
-## <3 catppuccin for [youtube](https://github.com/catppuccin/youtube created by elkrien, rubyowo, and isabelroses
+## <3 catppuccin for [youtube](https://github.com/catppuccin/youtube) created by elkrien, rubyowo, and isabelroses
 ## <3 catppuccin for [youtube music](https://github.com/catppuccin/youtubemusic) created by rubyowo, oceanicsquirrel, anubis, and kerichdev
 
 # based on the [list of all google products](https://about.google/intl/ALL_us/products/#all-products) provided by google
