@@ -1,19 +1,27 @@
-# catppuccin for google apps
-## ! [wip] catppuccin for google search created by mustakalafa
-## ! [wip] catppuccin for google mail created by isabelroses
-## ! [wip] catppuccin for google docs/slides/forms/sheets/script created by vanillyn
-## !! catpuccin for google workspace (meet/calandar/drive) not created yet
-## !! catppuccin for google communication (phone/messages) not created yet
-## !! catppuccin for google classroom (classroom/jamboard) not created yet
-## !! catppuccin for google developers (gcp/developers/api) not created yet
-## !! catppuccin for google misc (remotedesktop/fit/home) not created yet
-## !! catppuccin for google play web (play/store/shopping) not created yet
-## !! catppuccin for finance (finance/pay/wallet) not created yet
-## !! catppuccin for google travel (maps/earth/flights) not created yet
-## !! catppuccin for google ads (adsense/analytics/tag manager/tasks) not created yet
-## !! catppucccin for google education (arts and culture/expeditions/news/scholar) not created yet
+# WIP
+## ! [wip] catppuccin for docs/slides/forms/sheets/script created by vanillyn
+## ! [wip] catppuccin for mail created by isabelroses
+## ! [wip] catppuccin for search created by mustakalafa
+
+
+# Not started
+## !! catppuccin for ads (adsense/analytics/tag manager/tasks) not created yet
+## !! catppuccin for classroom (classroom/jamboard)
+## !! catppuccin for communication (phone/messages)
+## !! catppuccin for developers (gcp/developers/api)
+## !! catppuccin for education (arts and culture/expeditions/news/scholar)
+## !! catppuccin for finance (finance/pay/wallet)
+## !! catppuccin for misc (remotedesktop/fit/home)
+## !! catppuccin for play web (play/store/shopping)
+## !! catppuccin for travel (maps/earth/flights)
+## !! catppuccin for workspace (meet/calandar/drive)
+
+# Finished
+## <3 catppuccin for chrome created by tuhanayim and elkrien
+## <3 catppuccin for go created by caarlos0
 ## <3 catppuccin for youtube created by elkrien, rubyowo, and isabelroses
-## <3 catppuccin for google chrome created by tuhanayim and elkrien
+
+
 
 --- 
 
