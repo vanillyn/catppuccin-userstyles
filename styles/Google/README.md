@@ -10,8 +10,8 @@
 ## !! catppuccin for google play web (play/store/shopping) not created yet
 ## !! catppuccin for finance (finance/pay/wallet) not created yet
 ## !! catppuccin for google travel (maps/earth/flights) not created yet
-## !! catppuccin for google ads (adsense/analytics/tag manager/tasks)
-## !! catppucccin for google education (arts and culture/expeditions/news/scholar)
+## !! catppuccin for google ads (adsense/analytics/tag manager/tasks) not created yet
+## !! catppucccin for google education (arts and culture/expeditions/news/scholar) not created yet
 ## <3 catppuccin for youtube created by elkrien, rubyowo, and isabelroses
 ## <3 catppuccin for google chrome created by tuhanayim and elkrien
 
