@@ -38,6 +38,7 @@
     $mantle = #e6e9ef
     $crust = #dce0e8
     $shadow = $crust
+    $filter = invert(29%) sepia(5%) saturate(2832%) hue-rotate(197deg) brightness(96%) contrast(86%);
   } else if (theme=="Frappe") {
     $type = dark
     $rosewater = #f2d5cf
@@ -67,6 +68,7 @@
     $mantle = #292c3c
     $crust = #232634
     $shadow = $crust
+    $filter = invert(75%) sepia(32%) saturate(227%) hue-rotate(191deg) brightness(105%) contrast(92%);
   } else if (theme=="Macchiato") {
     $type = dark
     $rosewater = #f4dbd6
@@ -96,6 +98,7 @@
     $mantle = #1e2030
     $crust = #181926
     $shadow = $crust
+    $filter = invert(84%) sepia(13%) saturate(630%) hue-rotate(194deg) brightness(99%) contrast(93%);
   } else if (theme=="Mocha") {
     $type = dark
     $rosewater = #f5e0dc
@@ -125,6 +128,7 @@
     $mantle = #181825
     $crust = #11111b
     $shadow = $crust
+    $filter = invert(85%) sepia(75%) saturate(6659%) hue-rotate(178deg) brightness(101%) contrast(91%);
   }
 
   if (accent-color=="Rosewater") {
@@ -174,11 +178,21 @@
 }
 @-moz-document regexp("https:\\/\\/docs\\.google\\.com(\\/(document|spreadsheets|presentation|forms))?.*\\/u\\/.*") {
   // ----- Main Page -----
+  // Searchbar
+  button.gb_cf.gb_df, .gb_jf, .gb_Je {
+    background: $crust !important;
+    outline: none !important
+  }
+ input.gb_3e {
+    color: $text !important;
+  }
+  
   // Header
   .docs-homescreen-gb-container div,
   .gb_Ee button,
   .gb_Ee,
-  gb_Lc .gb_Ee {
+  gb_Lc .gb_Ee,
+ div.gb_Cc:nth-child(4) > div:nth-child(1) > a:nth-child(1) > span:nth-child(2) {
     background-color: $crust !important;
     color: $text !important;
   }
@@ -194,7 +208,9 @@
   input.gb_Ze:nth-child(1) {
     color: $text !important;
   }
-
+.docs-hs-tmp-contractedheader-text {
+  color: $text
+}
   // Google Sidebar
   .goog-menuitem-highlight,
   .docs-homescreen-leftmenu-menuitem.goog-menuitem-highlight .docs-homescreen-leftmenu-menuitem-text {
@@ -397,10 +413,6 @@
     color: $text;
   }
 
-  .docs-gm .docs-menubar .goog-control:hover {
-    background: $crust;
-    color: $accent-color !important;
-  }
 
   .docs-grille .docs-titlebar-badge .docs-save-indicator-icon:hover,
   .docs-grille .docs-titlebar-badge:hover,
@@ -421,9 +433,12 @@
   }
 
   .docs-grille #docs-titlebar-share-client-button .jfk-button,
-  .docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher {
-    background: $accent-color;
-    color: $base !important;
+  .docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher,
+  .docs-grille-gm3 #docs-toolbar-mode-switcher .goog-toolbar-menu-button-caption,
+  .docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher.goog-toolbar-menu-button-hover, 
+  .docs-grille-gm3 #docs-omnibox-toolbar .docs-omnibox-input {
+    background: $accent-color !important;
+    color: $mantle !important;
   }
 
   .docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher.goog-toolbar-menu-button-hover,
@@ -433,7 +448,7 @@
     border: none !important;
   }
 
-  .docos-streampane-container {
+  .docos-streampane-container,  {
     background: $accent-color !important;
   }
 
@@ -541,7 +556,7 @@
     background: $accent-color;
   }
 
-  // Modals
+  // --- Modals
   .docs-gm #docs-offline-optinpromo-description,
   .docs-gm #docs-offline-optinpromo-learn-more-container,
   .docs-gm .modal-dialog,
@@ -568,13 +583,7 @@
     border: none !important;
   }
 
-  .docs-gm .docs-material-bubble .jfk-button-action,
-  .docs-gm .modal-dialog .goog-buttonset-action,
-  .docs-gm .modal-dialog .jfk-button-action {
-    background: $accent-color !important; 
-    color: $base;
-    border: none !important
-  }
+
 
   // Word count
   .docs-gm .kix-documentmetricsdialog-row,
@@ -584,12 +593,6 @@
   }
 
   .docs-material-gm-labeled-checkbox-checkbox {
-    border: 2px solid $accent-color
-  }
-
-  .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-checked,
-  .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-undetermined {
-    background: $accent-color;
     border: 2px solid $accent-color
   }
 
@@ -619,10 +622,6 @@
     background: $crust !important
   }
 
-  .docs-grille .docs-material .docs-icon-img {
-    fill: $accent-color !important;
-  }
-
   // compare documents
   .kix-comparisondialog-select-doc-button {
     border: none;
@@ -647,12 +646,8 @@
     border: 2px solid $accent-color
   }
 
-  div.docs-material-gm-checkbox-checked {
-    background: $accent-color;
-  }
-
   a {
-    color: $accent-color!important;
+    color: $accent-color !important;
   }
 
   // translation
@@ -675,30 +670,9 @@
 
   // notifications
   .docos-ssd-content p,
-  .docos-ssd-radio-button-group .jfk-radiobutton-label label {
+  .docos-ssd-radio-button-group .jfk-radiobutton-label label,
+ .docs-material-gm-dialog-content {
     color: $text
-  }
-
-  .docos-ssd-radio-button-group .jfk-radiobutton-label span {
-    color: $subtext0
-  }
-
-  .docos-ssd-radio-button-group .jfk-radiobutton-checked .jfk-radiobutton-label label {
-    color: $accent-color
-  }
-
-  .docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton-checked .jfk-radiobutton-radio {
-    border-color: $accent-color !important;
-  }
-
-  docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton-checked.jfk-radiobutton .jfk-radiobutton-radio::after,
-  .jfk-radiobutton-checked .jfk-radiobutton-radio::after {
-    background-color: $accent-color !important;
-    border-color: $accent-color !important;
-  }
-
-  .docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton .jfk-radiobutton-radio {
-    border: 2px solid $text
   }
 
   // preferences
@@ -746,14 +720,6 @@
     border: none
   }
 
-  .kix-citations-add-source-button.goog-flat-button,
-  .kix-citations-flat-button.goog-flat-button,
-  .kix-citations-add-source-button-icon-path,
-  .docs-gm .docs-gm-sidebar-icon-path {
-    color: $accent-color !important;
-    fill: $accent-color !important
-  }
-
   .docs-material-gm-select-caption,
   .kix-citations-create-view-zero-state-content,
   .kix-citations-source-list-zero-state-content,
@@ -768,11 +734,210 @@
   .kix-citations-create-view-zero-state {
     background: $base;
     color: $text !important;
-    border: none 
+    border: none ;
     border-radius: 0px 0px 0 0 !important;
   }
 
   .kix-citations-source-list-zero-state-content {
-    color: $subtext0 !important
+    color: $subtext0 !important;
+  }
+  .kix-citations-add-source-button.goog-flat-button, .kix-citations-flat-button.goog-flat-button, .kix-citations-add-source-button-icon-path, .kix-citations-flat-button-icon-path {
+color: $accent-color;
+fill: $accent-color;
+}
+// Linked Items
+.docs-grille-gm3 .docs-contentembedding-titlebar {
+  background: $crust;
+  color: $text;
+  border: none;
+}
+.docs-grille-gm3 .docs-contentembedding-sidebar {
+  background: $base
+}
+.docs-contentembedding-sidebar-zero-state .docs-contentembedding-sidebar-zero-state-header {
+  color: $text;
+}
+.docs-contentembedding-sidebar-zero-state .docs-contentembedding-sidebar-zero-state-body {
+  color: $subtext0;
+}
+.docs-contentembedding-sidebar-zero-state .docs-contentembedding-sidebar-zero-state-button {
+  background: $accent-color;
+  color: $crust !important;
+  border: none !important;
+}
+.docs-contentembedding-sidebar-zero-state .docs-contentembedding-sidebar-zero-state-button:focus, .docs-contentembedding-sidebar-zero-state .docs-contentembedding-sidebar-zero-state-button:hover {
+  background: $mantle !important;
+  color: $accent-color !important;
+  border: none !important;
+}
+  // -- Dictionary
+  // Modal
+  .docs-userdictionarydialog-list-container {
+    background $mantle;
+    border: none
+  }
+
+  .docs-gm .docs-userdictionarydialog-row-container {
+    background: $mantle;
+    border: none !important;
+  }
+  .docs-gm .docs-userdictionarydialog-row-content {
+    color: $text;
+  }
+  // Sidebar
+  .docs-grille-gm3 .docs-dictionary-titlebar {
+    background: $crust;
+    color: $text;
+    border: none;
+  }
+  .docs-grille-gm3 .docs-dictionary-sidebar {
+    background: $base;
+  }
+  .docs-gm .docs-explore-emptylist-body {
+    color: $text;
+  }
+  // Definition
+  .docs-gm .docs-explore-dictionaryentry-title {
+    color: $accent-color;
+  }
+  .docs-explore-dictionaryentry-phonetics, .docs-gm .docs-explore-dictionaryentry-sensefamily-partofspeech {
+    color: $accent-color;
+  }
+  .docs-gm .docs-explore-dictionaryentries {
+    color: $text
+  }
+  .docs-explore-dictionaryentry-sensefamily-morphunits {
+    color: $subtext0
+  }
+  // -- Explore
+  // Main
+  .docs-grille-gm3 .docs-explore-sidebar-title,
+ .docs-explore-searchbar-labelinput:focus,
+.docs-explore-searchbar-ac-active {
+    background: $crust;
+    color: $text;
+    border: none
+  }
+ 
+ .docs-explore-snippetitem.goog-control-hover,
+ .docs-explore-searchbar-ac-renderer, 
+ .docs-explore-topicitem.goog-control-hover {
+    background: $mantle;
+    color $text;
+    outline: none !important;
+  }
+  .docs-explore-datapage, .docs-explore-card, .docs-grille-gm3 .docs-explore-sidebar {
+    background: $base !important;
+    color: $text !important;
+    border: none;
+  }
+  .docs-gm .docs-explore-card-title-heading,
+ .docs-explore-topicitem-title{
+    color: $text;
+  }
+  .docs-explore-topicitem-generator-text, .docs-explore-snippetitem-body-text {
+    color: $subtext0
+  }
+  .docs-gm .docs-explore-card-more-button, .docs-explore-snippetitem-body-domain {
+    color: $accent-color;
+  }
+  // Web Search
+  .docs-explore-tabbar, .docs-explore-serp-webresult-cite-button {
+    background: $mantle;
+    border-bottom: none;
+  }
+  .docs-explore-tabbar-tab-selected{
+    background: $crust;
+    border-bottom: 2px solid $accent-color;
+  }
+  .docs-explore-tabbar-tab-label, .docs-explore-kacard-name, .docs-explore-kacard-knowledgepanel-facts-list {
+    color: $text;
+  }
+  a.docs-explore-serp-webresultscard-allresults:link .docs-explore-serp-webresultscard-allresults-text, a.docs-explore-kacard-knowledgepanel-learnmore:link .docs-explore-kacard-knowledgepanel-learnmore-text {
+    color: $accent-color;
+  }
+  .docs-explore-serp-webresult-url {
+    color: $green;
+  }
+  .docs-explore-serp-webresultsview-card-container, .docs-explore-kacard, .docs-explore-serp-webresultscard, .docs-explore-insert-button {
+    background: $base;
+  }
+  .docs-explore-serp-webresult-snippet, .docs-explore-kacard-knowledgepanel-description, .docs-explore-kacard-disambiguationterm {
+    color: $subtext0
+  }
+ 
+  // --- Global Content
+  // Inputs
+   .docs-explore-searchbar-labelinput {
+    background: $mantle;
+    color $text;
+    outline: none !important;
+   }
+  // Buttons
+  .docs-gm .modal-dialog .jfk-button-standard, .docs-gm .modal-dialog button {
+    background: $accent-color;
+     color: $crust !important;
+     border: none !important;
+  }
+  .docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton-checked.jfk-radiobutton .jfk-radiobutton-radio::after,
+  .jfk-radiobutton-checked .jfk-radiobutton-radio::after {
+    background-color: $accent-color !important;
+    border-color: $accent-color !important;
+  }
+
+  div.docs-material-gm-checkbox-checked {
+    background: $accent-color;
+  }
+
+  .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-checked,
+  .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-undetermined {
+    background: $accent-color;
+    border: 2px solid $accent-color
+  }
+  .docs-gm .docs-material-bubble .jfk-button-action,
+  .docs-gm .modal-dialog .goog-buttonset-action,
+  .docs-gm .modal-dialog .jfk-button-action {
+    background: $accent-color !important; 
+    color: $base;
+    border: none !important
+  }
+    .docs-gm .modal-dialog .jfk-button-standard.jfk-button-disabled, .docs-gm .modal-dialog button[disabled], .docs-material-button-fill-primary.docs-material-button-disabled {
+    background: $base;
+    color: $subtext0;
+    border: 1px solid $subtext0 !important;
+    opacity: 0.7;
+  }
+  
+  .docos-ssd-radio-button-group .jfk-radiobutton-label span {
+    color: $subtext0
+  }
+
+  .docos-ssd-radio-button-group .jfk-radiobutton-checked .jfk-radiobutton-label label {
+    color: $accent-color
+  }
+
+  .docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton-checked .jfk-radiobutton-radio {
+    border: 2px solid $accent-color !important;
+  }
+
+  .docos-ssd-content .docos-ssd-radio-button-group .jfk-radiobutton .jfk-radiobutton-radio {
+    border: 2px solid $text
+  }
+  
+  // Icons
+.docs-icon-img, .docs-explore-img {
+    filter: brightness(0) $filter !important;
+  }
+  .docs-gm .docs-gm-sidebar-icon-path {
+    fill: $accent-color;
+  }
+ *.jfk-button:hover,
+ *.jfk-button.jfk-button-hover,
+ .docs-gm .docs-menubar .goog-control:hover,
+  .goog-flat-button-hover {
+    background-color: $base !important;
+  }
+  .goog-toolbar-menu-button-icon > div:nth-child(1), .docs-explore-google-logo {
+    filter: none !important;
   }
 }
