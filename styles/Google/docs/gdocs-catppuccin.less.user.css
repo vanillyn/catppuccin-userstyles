@@ -1,0 +1,833 @@
+      /* ==UserStyle==
+@name           Google Docs Catppuccin
+@namespace      github.com/vanillyn/catppuccin-userstyles
+@version        1.1.14
+@description    Soothing pastel theme for Google Docs
+@author         Catppuccin
+@preprocessor   less
+
+
+@var select flavor "Theme" ["latte:Latte*", "frappe:Frappe", "macchiato:Macchiato", "mocha:Mocha"]
+@var select accent  "Accent" ["rosewater:rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red*", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Grey"]
+==/UserStyle== */
+      @-moz-document regexp("https:\\/\\/(docs|script)\\.google\\.com(\\/(document|spreadsheets|presentation|forms))?.*") {
+        #main() {
+          background: @base !important;
+          input.gb_3e {
+            color: @text !important;
+          }
+
+          .docs-homescreen-gb-container div,
+          .gb_Ee button,
+          .gb_Ee,
+          gb_Lc .gb_Ee,
+          div.gb_Cc:nth-child(4) > div:nth-child(1) > a:nth-child(1) > span:nth-child(2), .docs-homescreen-drawer {
+            background-color: @crust !important;
+            color: @text !important;
+          }
+
+          .jfk-button-hover.jfk-button-clear-outline.docs-homescreen-templates-bar-back {
+            background-color: @mantle;
+            color: @accent-color;
+          }
+
+          .jfk-button-focused.jfk-button-clear-outline.docs-homescreen-templates-bar-back {
+            background-color: @mantle;
+            color: @accent-color;
+          }
+
+          .gb_Ee {
+            background-color: @crust;
+            border: none !important;
+            color: @text;
+            outline: none !important;
+            &:not(.gb_Fe) {
+              &:input::-moz-placeholder {
+                color: @text !important;
+              }
+            }
+          }
+
+          button {
+            svg {
+              color: @accent-color !important;
+              fill: @accent-color !important;
+            }
+          }
+
+          input.gb_Ze:nth-child(1) {
+            color: @text !important;
+          }
+
+          .docs-hs-tmp-contractedheader-text {
+            color: @text;
+          }
+
+          .goog-menuitem-highlight {
+            background-color: @crust !important;
+            color: @accent-color !important;
+          }
+
+          .docs-homescreen-leftmenu-menuitem.goog-menuitem-highlight {
+            .docs-homescreen-leftmenu-menuitem-text {
+              background-color: @crust !important;
+              color: @accent-color !important;
+            }
+          }
+
+          .docs-homescreen-leftmenu-material-menu-header-item {
+            background-color: @crust;
+            color: @text;
+          }
+
+          .docs-homescreen-material-bar-enabled {
+            .docs-homescreen-leftmenu {
+              background-color: @crust;
+              color: @text;
+            }
+
+            .docs-homescreen-list-item-time {
+              color: @text;
+            }
+          }
+
+          .docs-homescreen-leftmenu-menuitem-active-editor-name {
+            background-color: @crust;
+            color: @text;
+          }
+
+          .goog-menuitem {
+            background-color: @crust;
+            color: @text;
+          }
+
+          .docs-homescreen-leftmenu-menuitem-text,
+          .docs-homescreen-leftmenu-menuitem-icon,
+          .gb_Ia svg,
+          .gb_cd .gb_Nd,
+          .docs-homescreen-leftmenu-material-menu-header-text,
+          .docs-homescreen-leftmenu-tos-link.ogb-link {
+            color: @text;
+            fill: @text;
+          }
+
+          .docs-homescreen-leftmenu-tos-links-container {
+            span {
+              color: @accent-color !important;
+              fill: @accent-color !important;
+            }
+          }
+
+          .gb_f {
+            color: @accent-color !important;
+            fill: @accent-color !important;
+          }
+
+          .gb_8e {
+            color: @accent-color !important;
+            fill: @accent-color !important;
+          }
+
+          .gssb_i > .gssb_a {
+            background-color: @crust;
+            border-left: 3px solid @accent-color;
+          }
+
+          .gssb_e {
+            background-color: @crust;
+            border: none !important;
+            color: @text;
+            outline: none !important;
+          }
+
+          .gssb_m {
+            background-color: @crust;
+            border: none !important;
+            color: @text;
+            outline: none !important;
+          }
+
+          .gsbb_c {
+            background-color: @crust;
+            border: none !important;
+            color: @text;
+            outline: none !important;
+          }
+
+          .docs-homescreen-leftmenu-menuseparator {
+            border-top: 1px solid @accent-color;
+          }
+
+          .docs-hs-tmp-sch-content,
+          .docs-homescreen-floater-grid-header,
+          .docs-homescreen-floater-list-header,
+          .docs-homescreen-floater-header,
+          .docs-homescreen-owner-filter-button.goog-menu-button-hover,
+          .docs-homescreen-owner-filter-button.goog-menu-button-focused,
+          .docs-hs-tmp-sc-showcase .docs-homescreen-item-section,
+          .docsshared-menu-bubble .goog-menu,
+          .goog-menuitem .goog-menuitem-disabled {
+            background-color: @mantle;
+            color: @text;
+          }
+
+          .jfk-button.docs-hs-tmp-contractedheader-more,
+          .docs-hs-tmp-contractedheader-actions .docsshared-menu-bubble,
+          .docsshared-menu-bubble,
+          .docs-homescreen-owner-filter-button,
+          .docs-homescreen-floater-header-cell .docsshared-menu-bubble {
+            background-color: @crust;
+            border: none;
+            color: @text;
+          }
+
+          .docs-homescreen-templates-templateview-title {
+            color: @text;
+          }
+
+          .goog-menu {
+            .goog-option-selected {
+              color: @text;
+            }
+          }
+
+          .docs-homescreen-templates-templateview-brandauthor {
+            color: @subtext0;
+          }
+
+          .docs-homescreen-templates-templateview-style {
+            color: @subtext0;
+          }
+
+          .goog-menuitem-checkbox {
+            color: @subtext0;
+          }
+
+          .goog-menuitem-icon {
+            color: @subtext0;
+          }
+
+          body,
+          .docs-homescreen-item-section,
+          .docs-homescreen-grid-header,
+          .docs-homescreen-material-bar-enabled .docs-homescreen-item-container,
+          .docs-homescreen-homescreenmain {
+            background-color: @base;
+          }
+
+          .docs-homescreen-grid-item {
+            background-color: @mantle;
+            border: none;
+            color: @text;
+          }
+
+          .docs-homescreen-grid-item.goog-control-hover {
+            border-color: @accent-color;
+          }
+
+          .docs-homescreen-grid-item.goog-control-focused {
+            border-color: @accent-color;
+          }
+
+          .docs-homescreen-grid-item-title {
+            color: @text;
+          }
+
+          .docs-homescreen-grid-item-time-container {
+            color: @subtext0 !important;
+          }
+
+          .docs-homescreen-grid-item-sort-identifier {
+            color: @subtext0 !important;
+          }
+
+          .docs-homescreen-grid-item-time {
+            color: @subtext0 !important;
+          }
+
+          .docs-homescreen-list-item {
+            background-color: @base;
+            border: none;
+            color: @text;
+          }
+
+          .docs-homescreen-list-item-icon {
+            background-color: @base;
+            border: none;
+            color: @text;
+          }
+
+          .docs-homescreen-grid-header {
+            background-color: @base;
+            border: none;
+            color: @text;
+          }
+
+          .docs-homescreen-list-header {
+            background-color: @base;
+            border: none;
+            color: @text;
+          }
+
+          .docs-homescreen-list-item.goog-control-hover {
+            background-color: @mantle;
+            border: none;
+            outline: none;
+          }
+
+          .docs-homescreen-list-item.goog-control-focused {
+            background-color: @mantle;
+            border: none;
+            outline: none;
+          }
+
+          .docs-homescreen-list-item-owner {
+            color: @text;
+          }
+
+          .goog-modalpopup,
+          .modal-dialog,
+          .docs-homescreen-settings,
+          .docs-homescreen-settings-itemlabel,
+          .docs-homescreen-settings-bidi-checkbox-wrapper,
+          .docs-homescreen-settings-show-templates-checkbox-wrapper {
+            background-color: @base;
+            color: @text;
+          }
+
+          .docs-homescreen-settings {
+            a {
+              color: @accent-color !important;
+            }
+
+            .docs-homescreen-settings-ok-button.jfk-button-hover {
+              background-color: @accent-color;
+              color: @text;
+            }
+          }
+
+          a {
+            color: @accent-color !important;
+          }
+
+          div.docs-material-gm-checkbox,
+          span.docs-material-gm-checkbox,
+          div.docs-material-gm-checkbox-checked,
+          span.docs-material-gm-checkbox-checked,
+          div.docs-material-gm-checkbox-undetermined,
+          span.docs-material-gm-checkbox-undetermined,
+          .docs-homescreen-settings .docs-homescreen-settings-ok-button {
+            background-color: @accent-color;
+            border: 2px solid @accent-color;
+            color: @base;
+          }
+
+          .docs-homescreen-settings-dialog.docs-homescreen-modaldialog {
+            .modal-dialog-title {
+              background-color: @mantle;
+              color: @text;
+            }
+          }
+
+          html[stylus-iframe="https://docs.google.com"] {
+            background-color: @mantle !important;
+            color: @text !important;
+          }
+        }
+
+        #docs() {
+          .docs-explore-snippetitem.goog-control-hover {
+            background: @mantle;
+            color: @text;
+            outline: none !important;
+          }
+
+          .docs-explore-searchbar-ac-renderer {
+            background: @mantle;
+            color: @text;
+            outline: none !important;
+          }
+
+          .docs-explore-topicitem.goog-control-hover {
+            background: @mantle;
+            color: @text;
+            outline: none !important;
+          }
+
+          .docs-explore-datapage {
+            background: @base !important;
+            border: none;
+            color: @text !important;
+          }
+
+          .docs-explore-card {
+            background: @base !important;
+            border: none;
+            color: @text !important;
+          }
+
+          .docs-grille-gm3 {
+            .docs-explore-sidebar {
+              background: @base !important;
+              border: none;
+              color: @text !important;
+            }
+          }
+
+          .docs-gm {
+            .docs-explore-card-title-heading {
+              color: @text;
+            }
+
+            .docs-explore-card-more-button {
+              color: @accent-color;
+            }
+
+            .modal-dialog {
+              .jfk-button-standard {
+                background: @accent-color;
+                border: none !important;
+                color: @crust !important;
+              }
+
+              button {
+                background: @accent-color;
+                border: none !important;
+                color: @crust !important;
+              }
+
+              .goog-buttonset-action {
+                background: @accent-color !important;
+                border: none !important;
+                color: @base;
+              }
+
+              .jfk-button-action {
+                background: @accent-color !important;
+                border: none !important;
+                color: @base;
+              }
+
+              .jfk-button-standard.jfk-button-disabled {
+                background: @base;
+                border: 1px solid @subtext0 !important;
+                color: @subtext0;
+                opacity: 0.7;
+              }
+
+              button[disabled] {
+                background: @base;
+                border: 1px solid @subtext0 !important;
+                color: @subtext0;
+                opacity: 0.7;
+              }
+            }
+
+            .docs-material-bubble {
+              .jfk-button-action {
+                background: @accent-color !important;
+                border: none !important;
+                color: @base;
+              }
+            }
+
+            .docs-gm-sidebar-icon-path {
+              fill: @accent-color;
+            }
+
+            .docs-menubar {
+              .goog-control {
+                &:hover {
+                  background-color: @base !important;
+                }
+              }
+            }
+          }
+
+          .docs-explore-topicitem-title {
+            color: @text;
+          }
+
+          .docs-explore-topicitem-generator-text {
+            color: @subtext0;
+          }
+
+          .docs-explore-snippetitem-body-text {
+            color: @subtext0;
+          }
+
+          .docs-explore-snippetitem-body-domain {
+            color: @accent-color;
+          }
+
+          .docs-explore-tabbar {
+            background: @mantle;
+            border-bottom: none;
+          }
+
+          .docs-explore-serp-webresult-cite-button {
+            background: @mantle;
+            border-bottom: none;
+          }
+
+          .docs-explore-tabbar-tab-selected {
+            background: @crust;
+            border-bottom: 2px solid @accent-color;
+          }
+
+          .docs-explore-tabbar-tab-label {
+            color: @text;
+          }
+
+          .docs-explore-kacard-name {
+            color: @text;
+          }
+
+          .docs-explore-kacard-knowledgepanel-facts-list {
+            color: @text;
+          }
+
+          a.docs-explore-serp-webresultscard-allresults {
+            &:link {
+              .docs-explore-serp-webresultscard-allresults-text {
+                color: @accent-color;
+              }
+            }
+          }
+
+          a.docs-explore-kacard-knowledgepanel-learnmore {
+            &:link {
+              .docs-explore-kacard-knowledgepanel-learnmore-text {
+                color: @accent-color;
+              }
+            }
+          }
+
+          .docs-explore-serp-webresult-url {
+            color: @green;
+          }
+
+          .docs-explore-serp-webresultsview-card-container {
+            background: @base;
+          }
+
+          .docs-explore-kacard {
+            background: @base;
+          }
+
+          .docs-explore-serp-webresultscard {
+            background: @base;
+          }
+
+          .docs-explore-insert-button {
+            background: @base;
+          }
+
+          .docs-explore-serp-webresult-snippet {
+            color: @subtext0;
+          }
+
+          .docs-explore-kacard-knowledgepanel-description {
+            color: @subtext0;
+          }
+
+          .docs-explore-kacard-disambiguationterm {
+            color: @subtext0;
+          }
+
+          .docs-explore-searchbar-labelinput {
+            background: @mantle;
+            color: @text;
+            outline: none !important;
+          }
+
+          .docos-ssd-content {
+            .docos-ssd-radio-button-group {
+              .jfk-radiobutton-checked.jfk-radiobutton {
+                .jfk-radiobutton-radio:after {
+                  background-color: @accent-color !important;
+                  border-color: @accent-color !important;
+                }
+              }
+            }
+          }
+
+          .jfk-radiobutton-checked {
+            .jfk-radiobutton-radio {
+              border: 2px solid @accent-color !important;
+            }
+          }
+
+          .jfk-radiobutton {
+            .jfk-radiobutton-radio {
+              border: 2px solid @text;
+            }
+          }
+
+          .jfk-radiobutton-checked {
+            .jfk-radiobutton-radio:after {
+              background-color: @accent-color !important;
+              border-color: @accent-color !important;
+            }
+          }
+
+          div.docs-material-gm-checkbox-checked {
+            background: @accent-color;
+          }
+
+          .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-checked {
+            background: @accent-color;
+            border: 2px solid @accent-color;
+          }
+
+          .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-undetermined {
+            background: @accent-color;
+            border: 2px solid @accent-color;
+          }
+
+          .docs-material-button-fill-primary.docs-material-button-disabled {
+            background: @base;
+            border: 1px solid @subtext0 !important;
+            color: @subtext0;
+            opacity: 0.7;
+          }
+
+          .docos-ssd-radio-button-group {
+            .jfk-radiobutton-label {
+              span {
+                color: @subtext0;
+              }
+            }
+
+            .jfk-radiobutton-checked {
+              .jfk-radiobutton-label {
+                label {
+                  color: @accent-color;
+                }
+              }
+            }
+          }
+
+          .docs-icon-img {
+            filter: brightness(0) @filter !important;
+          }
+
+          .docs-explore-img {
+            filter: brightness(0) @filter !important;
+          }
+
+          *.jfk-button {
+            &:hover {
+              background-color: @base !important;
+            }
+          }
+
+          *.jfk-button.jfk-button-hover {
+            background-color: @base !important;
+          }
+
+          .goog-flat-button-hover {
+            background-color: @base !important;
+          }
+
+          .goog-toolbar-menu-button-icon > div {
+            &:nth-child(1) {
+              filter: none !important;
+            }
+          }
+
+          .docs-explore-google-logo {
+            filter: none !important;
+          }
+        }
+
+        #catppuccin(@flavor) when (@flavor =latte) {
+          @rosewater: hsl( 11, 59%, 67%);
+          @flamingo: hsl( 0, 60%, 67%);
+          @pink: hsl(316, 73%, 69%);
+          @mauve: hsl(266, 85%, 58%);
+          @red: hsl(347, 87%, 44%);
+          @maroon: hsl(355, 76%, 59%);
+          @peach: hsl( 22, 99%, 52%);
+          @yellow: hsl( 35, 77%, 49%);
+          @green: hsl(109, 58%, 40%);
+          @teal: hsl(183, 74%, 35%);
+          @sky: hsl(197, 97%, 46%);
+          @sapphire: hsl(189, 70%, 42%);
+          @blue: hsl(220, 91%, 54%);
+          @lavender: hsl(231, 97%, 72%);
+          @text: hsl(234, 16%, 35%);
+          @subtext1: hsl(233, 13%, 41%);
+          @subtext0: hsl(233, 10%, 47%);
+          @overlay2: hsl(232, 10%, 53%);
+          @overlay1: hsl(231, 10%, 59%);
+          @overlay0: hsl(228, 11%, 65%);
+          @surface2: hsl(227, 12%, 71%);
+          @surface1: hsl(225, 14%, 77%);
+          @surface0: hsl(223, 16%, 83%);
+          @base: hsl(220, 23%, 95%);
+          @mantle: hsl(220, 22%, 92%);
+          @crust: hsl(220, 21%, 89%);
+          @filter: invert(29%) sepia(5%) saturate(2832%) hue-rotate(197deg) brightness(96%) contrast(86%);
+        }
+
+        #catppuccin(@flavor) when (@flavor =frappe) {
+          @rosewater: hsl( 10, 57%, 88%);
+          @flamingo: hsl( 0, 59%, 84%);
+          @pink: hsl(316, 73%, 84%);
+          @mauve: hsl(277, 59%, 76%);
+          @red: hsl(359, 68%, 71%);
+          @maroon: hsl(358, 66%, 76%);
+          @peach: hsl( 20, 79%, 70%);
+          @yellow: hsl( 40, 62%, 73%);
+          @green: hsl( 96, 44%, 68%);
+          @teal: hsl(172, 39%, 65%);
+          @sky: hsl(189, 48%, 73%);
+          @sapphire: hsl(199, 55%, 69%);
+          @blue: hsl(222, 74%, 74%);
+          @lavender: hsl(239, 66%, 84%);
+          @text: hsl(227, 70%, 87%);
+          @subtext1: hsl(227, 44%, 80%);
+          @subtext0: hsl(228, 29%, 73%);
+          @overlay2: hsl(228, 22%, 66%);
+          @overlay1: hsl(227, 17%, 58%);
+          @overlay0: hsl(229, 13%, 52%);
+          @surface2: hsl(228, 13%, 44%);
+          @surface1: hsl(227, 15%, 37%);
+          @surface0: hsl(230, 16%, 30%);
+          @base: hsl(229, 19%, 23%);
+          @mantle: hsl(231, 19%, 20%);
+          @crust: hsl(229, 20%, 17%);
+          @filter: invert(75%) sepia(32%) saturate(227%) hue-rotate(191deg) brightness(105%) contrast(92%);
+        }
+
+        #catppuccin(@flavor) when (@flavor =macchiato) {
+          @rosewater: hsl( 10, 58%, 90%);
+          @flamingo: hsl( 0, 58%, 86%);
+          @pink: hsl(316, 74%, 85%);
+          @mauve: hsl(267, 83%, 80%);
+          @red: hsl(351, 74%, 73%);
+          @maroon: hsl(355, 71%, 77%);
+          @peach: hsl( 21, 86%, 73%);
+          @yellow: hsl( 40, 70%, 78%);
+          @green: hsl(105, 48%, 72%);
+          @teal: hsl(171, 47%, 69%);
+          @sky: hsl(189, 59%, 73%);
+          @sapphire: hsl(199, 66%, 69%);
+          @blue: hsl(220, 83%, 75%);
+          @lavender: hsl(234, 82%, 85%);
+          @text: hsl(227, 68%, 88%);
+          @subtext1: hsl(228, 39%, 80%);
+          @subtext0: hsl(227, 27%, 72%);
+          @overlay2: hsl(228, 20%, 65%);
+          @overlay1: hsl(228, 15%, 57%);
+          @overlay0: hsl(230, 12%, 49%);
+          @surface2: hsl(230, 14%, 41%);
+          @surface1: hsl(231, 16%, 34%);
+          @surface0: hsl(230, 19%, 26%);
+          @base: hsl(232, 23%, 18%);
+          @mantle: hsl(233, 23%, 15%);
+          @crust: hsl(236, 23%, 12%);
+          @filter: invert(84%) sepia(13%) saturate(630%) hue-rotate(194deg) brightness(99%) contrast(93%);
+        }
+
+        #catppuccin(@flavor) when (@flavor =mocha) {
+          @rosewater: hsl( 10, 56%, 91%);
+          @flamingo: hsl( 0, 59%, 88%);
+          @pink: hsl(316, 72%, 86%);
+          @mauve: hsl(267, 84%, 81%);
+          @red: hsl(343, 81%, 75%);
+          @maroon: hsl(350, 65%, 77%);
+          @peach: hsl( 23, 92%, 75%);
+          @yellow: hsl( 41, 86%, 83%);
+          @green: hsl(115, 54%, 76%);
+          @teal: hsl(170, 57%, 73%);
+          @sky: hsl(189, 71%, 73%);
+          @sapphire: hsl(199, 76%, 69%);
+          @blue: hsl(217, 92%, 76%);
+          @lavender: hsl(232, 97%, 85%);
+          @text: hsl(226, 64%, 88%);
+          @subtext1: hsl(227, 35%, 80%);
+          @subtext0: hsl(228, 24%, 72%);
+          @overlay2: hsl(228, 17%, 64%);
+          @overlay1: hsl(230, 13%, 55%);
+          @overlay0: hsl(231, 11%, 47%);
+          @surface2: hsl(233, 12%, 39%);
+          @surface1: hsl(234, 13%, 31%);
+          @surface0: hsl(237, 16%, 23%);
+          @base: hsl(240, 21%, 15%);
+          @mantle: hsl(240, 21%, 12%);
+          @crust: hsl(240, 23%, 9%);
+          @filter: invert(85%) sepia(75%) saturate(6659%) hue-rotate(178deg) brightness(101%) contrast(91%);
+        }
+
+
+
+        /* ----- Accent Mixins ----- */
+        #accent(@accent) when (@accent =rosewater) {
+          @accent-color: @rosewater;
+        }
+
+        #accent(@accent) when (@accent =flamingo) {
+          @accent-color: @flamingo;
+        }
+
+        #accent(@accent) when (@accent =pink) {
+          @accent-color: @pink;
+        }
+
+        #accent(@accent) when (@accent =mauve) {
+          @accent-color: @mauve;
+        }
+
+        #accent(@accent) when (@accent =red) {
+          @accent-color: @red;
+        }
+
+        #accent(@accent) when (@accent =maroon) {
+          @accent-color: @maroon;
+        }
+
+        #accent(@accent) when (@accent =peach) {
+          @accent-color: @peach;
+        }
+
+        #accent(@accent) when (@accent =yellow) {
+          @accent-color: @yellow;
+        }
+
+        #accent(@accent) when (@accent =green) {
+          @accent-color: @green;
+        }
+
+        #accent(@accent) when (@accent =teal) {
+          @accent-color: @teal;
+        }
+
+        #accent(@accent) when (@accent =blue) {
+          @accent-color: @blue;
+        }
+
+        #accent(@accent) when (@accent =sapphire) {
+          @accent-color: @sapphire;
+        }
+
+        #accent(@accent) when (@accent =sky) {
+          @accent-color: @sky;
+        }
+
+        #accent(@accent) when (@accent =lavender) {
+          @accent-color: @lavender;
+        }
+
+        #accent(@accent) when (@accent =subtext0) {
+          @accent-color: @subtext0;
+        }
+
+        body {
+          #catppuccin(@flavor);
+          #accent(@accent);
+          #main();
+          #docs();
+        }
+      }
