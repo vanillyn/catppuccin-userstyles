@@ -1,85 +1,73 @@
 /* ==UserStyle==
-@name Gelbooru Catppuccin-Mocha
-@namespace https://github.com/vanillyn
-@description Soothing pastel theme for Gelbooru.
-@preprocessor stylus
+@name Gelbooru Catppuccin
+@namespace github.com/vanillyn/catppuccin-userstyles
+@homepageURL https://github.com/vanillyn/catppuccin-userstyles
+@version 0.1
+@updateURL https://github.com/vanillyn/catppuccin-userstyles/raw/main/styles/Gelbooru/gelbooru-catppuccin.user.css
+@supportURL https://github.com/vanillyn/catppuccin-userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Agoogle
+@description Soothing pastel theme for Catppuccin
 @author Vanillyn
-@license GNU-V3.0
-@version 0.9
-@var select theme "Theme" ["Latte", "Frappe", "Macchiato", "Mocha*"]
+@license MIT
+
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire*", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
 ==/UserStyle== */
-
-@-moz-document domain("gelbooru.com") {
-    if (theme=="Mocha") {
-        $base=#1e1e2e 
-        $mantle=#181825 
-        $crust=#11111b 
-        $red=#f38ba8 
-        $mauve=#cba6f7 
-        $green=#a6e3a1 
-        $blue=#89b4fa
-        $grey=#45475a 
-        $teal=#94e2d5 
-        $text=#cdd6f4
-    }
-
-    else if (theme=="Macchiato") {
-        $base=#24273a 
-        $mantle=#1e2030 
-        $crust=#181926 
-        $red=#ed8796 
-        $mauve=#c6a0f6 
-        $green=#a6da95 
-        $blue=#8aadf4c 
-        $grey=#494d64 
-        $teal=#8bd5ca 
-        $text=#cad3f5
-    }
-
-    else if (theme=="Frappe") {
-        $base=#303446 
-        $mantle=#292c3c 
-        $crust=#232634 
-        $red=#e78284 
-        $mauve=#ca9ee6 
-        $green=#a6d189 
-        $blue=#8caaee 
-        $grey=#51576d 
-        $teal=#81c8be 
-        $text=#c6d0f5
-    }
-
-    else if (theme=="Latte") {
-        $base=#eff1f5 
-        $mantle=#e6e9ef 
-        $crust=#dce0e8 
-        $red=#d20f39 
-        $mauve=#8839ef 
-        $green=#40a02b 
-        $blue=#1e66f5 
-        $grey=#1e1e2e 
-        $teal=#179299 
-        $text=#4c4f69
-    }
-
+@-moz-document regexp("^https?://gelbooru\\..*")
+{
+  @media (prefers-color-scheme: light) {
     :root {
-        --red: $red;
-        --mauve: $mauve;
-        --green: $green;
-        --blue: $blue;
-        --grey: $grey;
-        --teal: $teal;
-        --base: $base;
-        --mantle: $mantle;
-        --crust: $crust;
-        --text: $text;
+      #catppuccin(@lightFlavor, @accentColor);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      #catppuccin(@darkFlavor, @accentColor);
+    }
+  }
+
+  #catppuccin(@lookup, @accent) {
+    @rosewater: @catppuccin[@@lookup][@rosewater];
+    @flamingo: @catppuccin[@@lookup][@flamingo];
+    @pink: @catppuccin[@@lookup][@pink];
+    @mauve: @catppuccin[@@lookup][@mauve];
+    @red: @catppuccin[@@lookup][@red];
+    @maroon: @catppuccin[@@lookup][@maroon];
+    @peach: @catppuccin[@@lookup][@peach];
+    @yellow: @catppuccin[@@lookup][@yellow];
+    @green: @catppuccin[@@lookup][@green];
+    @teal: @catppuccin[@@lookup][@teal];
+    @sky: @catppuccin[@@lookup][@sky];
+    @sapphire: @catppuccin[@@lookup][@sapphire];
+    @blue: @catppuccin[@@lookup][@blue];
+    @lavender: @catppuccin[@@lookup][@lavender];
+    @text: @catppuccin[@@lookup][@text];
+    @subtext1: @catppuccin[@@lookup][@subtext1];
+    @subtext0: @catppuccin[@@lookup][@subtext0];
+    @overlay2: @catppuccin[@@lookup][@overlay2];
+    @overlay1: @catppuccin[@@lookup][@overlay1];
+    @overlay0: @catppuccin[@@lookup][@overlay0];
+    @surface2: @catppuccin[@@lookup][@surface2];
+    @surface1: @catppuccin[@@lookup][@surface1];
+    @surface0: @catppuccin[@@lookup][@surface0];
+    @base: @catppuccin[@@lookup][@base];
+    @mantle: @catppuccin[@@lookup][@mantle];
+    @crust: @catppuccin[@@lookup][@crust];
+    @accent-color: @catppuccin[@@lookup][@@accent];
+
+    color-scheme: if(@lookup =latte, light, dark);
+
+    ::selection {
+      background-color: fade(@accent-color, 30%);
     }
 
-    *, 
-    .topnav a, 
+    *,
+    .topnav a,
     .navSubmenu a {
-        border: none !important;
-        color: var(--text);
+      border: none !important;
+      color: @text;
     }
 
     .topnav,
@@ -87,14 +75,14 @@
     .searchArea,
     .searchList,
     .commentBody {
-        background-color: var(--crust);
-        color: var(--text) !important;
+      background-color: @crust;
+      color: @text !important;
     }
 
     .navSubmenu,
     .ui-autocomplete-input {
-        background-color: var(--mantle);
-        color: var(--text);
+      background-color: @mantle;
+      color: @text;
     }
 
     .thumbnail-container,
@@ -103,64 +91,67 @@
     .aside,
     div#container,
     .topnav a:hover {
-        background-color: var(--base);
+      background-color: @base;
     }
 
     .footerAd {
-        display: none;
+      display: none;
     }
 
     .topnav a.active {
-        background-color: var(--base);
-        color: var(--accent) !important;
+      background-color: @base;
+      color: @accent !important;
     }
 
     .tag-type-artist > a,
     a.tag-type-artist {
-        color: var(--red) !important;
+      color: @red !important;
     }
 
     .tag-type-copyright > a,
     a.tag-type-copyright {
-        color: var(--mauve) !important;
+      color: @mauve !important;
     }
 
     .tag-type-character > a,
     a.tag-type-character {
-        color: var(--green) !important;
+      color: @green !important;
     }
 
     .tag-type-tag,
     .tag-type-general > a,
     a.tag-type-tag {
-        color: var(--blue) !important;
+      color: @blue !important;
     }
 
     .tag-type-metadata > a,
     a.tag-type-metadata {
-        color: var(--orange) !important;
+      color: @peach !important;
     }
 
     .tag-type-deprecated > a,
     a.tag-type-deprecated {
-        color: var(--grey) !important;
+      color: @subtext0 !important;
     }
 
     #links {
-        color: var(--accent) !important;
+      color: @accent !important;
     }
 
     .thumbnail-preview {
-        transition: transform 1s;
+      transition: transform 1s;
     }
 
     .thumbnail-preview:hover {
-        transform: scale(1.5);
+      transform: scale(1.5);
     }
+  }
 }
-@-moz-document url-prefix("https://gelbooru.com/index.php?page=post&s=view&id=") {
-    img:not(.homeIcon > img):not(.invert):not(#myTopnav > a > img[src="layout/lightbulb-fill.svg"]) {
-        background-image: url('data:image/gif;base64,R0lGODlhEAAQAIAAAMDAwP///yH5BAAAAAAALAAAAAAQABAAAAIfhG+hq4jM3IFLJhoswNly/XkcBpIiVaInlLJr9FZWAQA7');
-        background-size: auto!important;
-    }
-}
+
+/* prettier-ignore */
+@catppuccin: {
+  @latte:     { @rosewater: #dc8a78; @flamingo: #dd7878; @pink: #ea76cb; @mauve: #8839ef; @red: #d20f39; @maroon: #e64553; @peach: #fe640b; @yellow: #df8e1d; @green: #40a02b; @teal: #179299; @sky: #04a5e5; @sapphire: #209fb5; @blue: #1e66f5; @lavender: #7287fd; @text: #4c4f69; @subtext1: #5c5f77; @subtext0: #6c6f85; @overlay2: #7c7f93; @overlay1: #8c8fa1; @overlay0: #9ca0b0; @surface2: #acb0be; @surface1: #bcc0cc; @surface0: #ccd0da; @base: #eff1f5; @mantle: #e6e9ef; @crust: #dce0e8; };
+  @frappe:    { @rosewater: #f2d5cf; @flamingo: #eebebe; @pink: #f4b8e4; @mauve: #ca9ee6; @red: #e78284; @maroon: #ea999c; @peach: #ef9f76; @yellow: #e5c890; @green: #a6d189; @teal: #81c8be; @sky: #99d1db; @sapphire: #85c1dc; @blue: #8caaee; @lavender: #babbf1; @text: #c6d0f5; @subtext1: #b5bfe2; @subtext0: #a5adce; @overlay2: #949cbb; @overlay1: #838ba7; @overlay0: #737994; @surface2: #626880; @surface1: #51576d; @surface0: #414559; @base: #303446; @mantle: #292c3c; @crust: #232634; };
+  @macchiato: { @rosewater: #f4dbd6; @flamingo: #f0c6c6; @pink: #f5bde6; @mauve: #c6a0f6; @red: #ed8796; @maroon: #ee99a0; @peach: #f5a97f; @yellow: #eed49f; @green: #a6da95; @teal: #8bd5ca; @sky: #91d7e3; @sapphire: #7dc4e4; @blue: #8aadf4; @lavender: #b7bdf8; @text: #cad3f5; @subtext1: #b8c0e0; @subtext0: #a5adcb; @overlay2: #939ab7; @overlay1: #8087a2; @overlay0: #6e738d; @surface2: #5b6078; @surface1: #494d64; @surface0: #363a4f; @base: #24273a; @mantle: #1e2030; @crust: #181926; };
+  @mocha:     { @rosewater: #f5e0dc; @flamingo: #f2cdcd; @pink: #f5c2e7; @mauve: #cba6f7; @red: #f38ba8; @maroon: #eba0ac; @peach: #fab387; @yellow: #f9e2af; @green: #a6e3a1; @teal: #94e2d5; @sky: #89dceb; @sapphire: #74c7ec; @blue: #89b4fa; @lavender: #b4befe; @text: #cdd6f4; @subtext1: #bac2de; @subtext0: #a6adc8; @overlay2: #9399b2; @overlay1: #7f849c; @overlay0: #6c7086; @surface2: #585b70; @surface1: #45475a; @surface0: #313244; @base: #1e1e2e; @mantle: #181825; @crust: #11111b; };
+ }
